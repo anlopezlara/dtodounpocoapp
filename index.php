@@ -134,10 +134,18 @@ $appName = explode('.', $domain)[0];
                     if($_GET['code'] || $_SESSION['access_token']) {
                         echo 'PASA 1'.$_GET['code'];
                         echo 'PASA 1'.$_SESSION['access_token'];
+                        if($_GET['code'] && !($_SESSION['access_token'])) 
+                        {
+                            echo 'PASA 2';
+                        } 
+                        else 
+                        {
+                            echo 'PASA 3';
+                        }
                     } 
                     else 
                     {
-                        echo 'PASA 2';
+                        echo 'PASA -->';
                     }
                     ?>  
                 </div>
