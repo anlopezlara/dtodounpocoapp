@@ -11,8 +11,8 @@ $url = '/sites/' . $siteId;
 $result = $meli->get($url, $params);
 
 echo '<pre>';
-print_r($params);
-print_r($siteId);
-print_r($url);
-print_r($result);
+println('params' . $params);
+println('siteId' . $siteId);
+println('url' . $url);
+printr($result);
 echo '</pre>';
