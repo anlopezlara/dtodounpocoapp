@@ -132,7 +132,8 @@ $appName = explode('.', $domain)[0];
                     $meli = new Meli($appId, $secretKey);
 
                     if($_GET['code'] || $_SESSION['access_token']) {
-                        echo 'PASA 1';
+                        echo 'PASA 1'.$_GET['code'];
+                        echo 'PASA 1'.$_SESSION['access_token'];
                     } 
                     else 
                     {
