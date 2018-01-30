@@ -48,7 +48,7 @@ $appName = explode('.', $domain)[0];
                 <div class="col-md-6">
                     <h3>How it works?</h3>
                     <ul>
-                        <li>HOLA MUNDO This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/go-getting-started">Heroku Button</a> on the repository.</li>
+                        <li>HOLA MUNDO... This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/go-getting-started">Heroku Button</a> on the repository.</li>
                         <li>When Heroku received the source code it used the go tool chain to compile the application along with any vendored dependencies and created a deployable slug.</li>
                         <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
                         <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
@@ -124,6 +124,10 @@ $appName = explode('.', $domain)[0];
                     }
                     ?>
 
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <h3>Conexión Mercado Libre</h3>
+                    <p>Primera prueba de conexión a Mercado Libre</p>
                 </div>
                 <div class="col-sm-6 col-md-6">
                     <h3>Get site</h3>
