@@ -132,11 +132,18 @@ $appName = explode('.', $domain)[0];
                     $meli = new Meli($appId, $secretKey);
 
                     if($_GET['code'] || $_SESSION['access_token']) {
-                        echo '<p>PASA 1 ' .$_GET['code']             . '</p>';
-                        echo '<p>PASA 1 ' .$_SESSION['access_token'] . '</p>';
+                        echo '<p>PASA 1 code->' .$_GET['code']             . '</p>';
+                        echo '<p>PASA 1 access_token->' .$_SESSION['access_token'] . '</p>';
                         if($_GET['code'] && !($_SESSION['access_token'])) 
                         {
                             echo '<p>PASA 2</p>';
+                            $user = $meli->authorize($_GET['code'], $redirectURI);
+
+                            // Now we create the sessions with the authenticated user
+                            $_SESSION['access_token'] = $user['body']->access_token;
+                            $_SESSION['expires_in'] = time() + $user['body']->expires_in;
+                            $_SESSION['refresh_token'] = $user['body']->refresh_token;
+                            echo '<p>PASA 2.1</p>';
                         } 
                         else 
                         {
