@@ -143,6 +143,11 @@ $appName = explode('.', $domain)[0];
                             $_SESSION['access_token'] = $user['body']->access_token;
                             $_SESSION['expires_in'] = time() + $user['body']->expires_in;
                             $_SESSION['refresh_token'] = $user['body']->refresh_token;
+							
+							echo '<p>access_token ->' . $_SESSION['access_token']  . '</p>';
+							echo '<p>expires_in ->'   . $_SESSION['expires_in']    . '</p>';
+							echo '<p>refresh_token ->'. $_SESSION['refresh_token'] . '</p>';
+							
                             echo '<p>PASA 2.1</p>';
                         } 
                         else 
