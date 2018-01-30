@@ -128,6 +128,17 @@ $appName = explode('.', $domain)[0];
                 <div class="col-sm-6 col-md-6">
                     <h3>Conexión Mercado Libre</h3>
                     <p>Primera prueba de conexión a Mercado Libre</p>
+                    <?php
+                    $meli = new Meli($appId, $secretKey);
+
+                    if($_GET['code'] || $_SESSION['access_token']) {
+                        echo 'PASA 1';
+                    } 
+                    else 
+                    {
+                        echo 'PASA 2';
+                    }
+                    ?>  
                 </div>
                 <div class="col-sm-6 col-md-6">
                     <h3>Get site</h3>
