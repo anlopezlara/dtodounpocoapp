@@ -62,7 +62,7 @@ $appName = explode('.', $domain)[0];
 									print_r($_SESSION);
 								echo '</pre>';
 							} else {
-								echo '<a href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Login using MercadoLibre oAuth 2.0</a>';
+								echo '<p><a alt="Accesar a MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Autenticación</a></p>';
 							}
 						?>
 
