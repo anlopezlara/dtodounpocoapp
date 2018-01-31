@@ -20,7 +20,7 @@ print_r('<p>********************************************************************
 
 while(list(,$key) = each($result))
 {
-    list(,$value) = each($result);
+    list(,$value) = each($key);
     #echo "$key: $value\n";
 	print_r('<p>--'.$value.'</p>');
 }
