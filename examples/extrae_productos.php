@@ -14,8 +14,7 @@ print_r('<p>2</p>');
 #print_r($result[body]);
 foreach ( $result[body] as $key => &$value )
 {
-    print_r('<p>'.$key  .'</p>');
-	print_r('<p>'.$value.'</p>');
+    print_r('<p>'.$key.' -->'.$value.'</p>');
 }
 print_r('<p>********************************************************************</p>');
 print_r($result[body]);
