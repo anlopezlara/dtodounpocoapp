@@ -17,6 +17,15 @@ foreach ( $result[body] as $key => &$value )
 	if ($key == 'id') {
 		print_r('<p>'.$key.' -->'.$value.'</p>');
 	}
+	if ($key == 'price') {
+		print_r('<p>'.$key.' -->'.$value.'</p>');
+	}
+	if ($key == 'available_quantity') {
+		print_r('<p>'.$key.' -->'.$value.'</p>');
+	}
+	if ($key == 'status') {
+		print_r('<p>'.$key.' -->'.$value.'</p>');
+	}
 }
 print_r('<p>********************************************************************</p>');
 print_r($result[body]);
