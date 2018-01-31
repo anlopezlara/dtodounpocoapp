@@ -2,31 +2,13 @@
 require '../Meli/meli.php';
 require '../configApp.php';
 $meli = new Meli($appId, $secretKey);
-$params = array('nickname'=>$nickname);
-$url = '/sites/' . $siteId. '/search';
+#$params = array('Producto'=>'MLM573165050');
+$params = array();
+$url = '/sites/' . $siteId. '/items/MLM573165050';
 
 $result = $meli->get($url, $params);
 echo '<pre>';
 print_r('<p>4</p>');
-
-#print_r($result["body"]);
-/*foreach($result["body"] as $nivel => $value) { 
-	print_r('<p>####################VAVLUE######################################</p>');
-	print_r($value);
-	print_r('<p>####################NIVEL######################################</p>');
-	print_r($nivel);
-}*/
-print_r('<p>****************************************************************************************************</p>');
-
-
-foreach($result["body"] as $nivel => $value) { 
-	print_r('<p>####################VAVLUE######################################</p>');
-	print_r(array_keys($value));
-	print_r('<p>####################NIVEL######################################</p>');
-	print_r(array_keys($nivel));
-}
-
-print_r('<p>****************************************************************************************************</p>');
 
 print_r($result);
 
