@@ -9,4 +9,9 @@ $result = $meli->get($url, $params);
 echo '<pre>';
 print_r('<p>1</p>');
 print_r($result);
+
+foreach($result as $result_ => $value) {
+	print_r($result_.'-->'.$value);
+}
+
 echo '</pre>';
