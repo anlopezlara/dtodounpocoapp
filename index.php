@@ -40,7 +40,7 @@ $appName = explode('.', $domain)[0];
 										$_SESSION['access_token'] = $user['body']->access_token;
 										$_SESSION['expires_in'] = time() + $user['body']->expires_in;
 										$_SESSION['refresh_token'] = $user['body']->refresh_token;
-										echo '<p><a alt="Extrae productos" class="btn" href="https://dtodounpocoapp.herokuapp.com/extrae_productos.php">Autenticación</a></p>';
+										echo '<p><a alt="Extrae productos" class="btn" href="https://dtodounpocoapp.herokuapp.com/extrae_productos.php">Extrae productos</a></p>';
 									}catch(Exception $e){
 										echo "Exception: ",  $e->getMessage(), "\n";
 									}
@@ -54,7 +54,7 @@ $appName = explode('.', $domain)[0];
 											$_SESSION['access_token'] = $refresh['body']->access_token;
 											$_SESSION['expires_in'] = time() + $refresh['body']->expires_in;
 											$_SESSION['refresh_token'] = $refresh['body']->refresh_token;
-											echo '<p><a alt="Extrae productos" class="btn" href="https://dtodounpocoapp.herokuapp.com/extrae_productos.php">Autenticación</a></p>';
+											echo '<p><a alt="Extrae productos" class="btn" href="https://dtodounpocoapp.herokuapp.com/extrae_productos.php">Extrae productos</a></p>';
 										} catch (Exception $e) {
 											echo "Exception: ",  $e->getMessage(), "\n";
 										}
