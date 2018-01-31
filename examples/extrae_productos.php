@@ -17,6 +17,9 @@ foreach ( $result[body] as $key => &$value )
 	if ($key == 'id') {
 		print_r('<p>'.$key.' -->'.$value.'</p>');
 	}
+	if ($key == 'title') {
+		print_r('<p>'.$key.' -->'.$value.'</p>');
+	}
 	if ($key == 'price') {
 		print_r('<p>'.$key.' -->'.$value.'</p>');
 	}
