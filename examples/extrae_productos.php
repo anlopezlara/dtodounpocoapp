@@ -12,11 +12,11 @@ echo '<pre>';
 print_r('<p>2</p>');
 #print_r($result);
 
-foreach ( $result as $key => &$value )
+/*foreach ( $result as $key => &$value )
 {
     print_r('<p>'.$key  .'</p>');
 	print_r('<p>'.$value.'</p>');
-}
+}*/
 print_r('<p>********************************************************************</p>');
 print_r($result);
 
