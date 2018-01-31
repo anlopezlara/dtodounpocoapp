@@ -9,7 +9,7 @@ $result = $meli->get($url, $params);
 echo '<pre>';
 print_r('<p>4</p>');
 
-print_r($result["body"]["site_id"]);
+print_r($result["body"]);
 print_r('<p>************************************************************</p>');
 print_r('<p>************************************************************</p>');
 #foreach ($result as $i => $value) {
