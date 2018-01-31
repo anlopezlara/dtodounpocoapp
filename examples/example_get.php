@@ -5,7 +5,7 @@ $meli = new Meli($appId, $secretKey);
 $params = array();
 $url = '/sites/' . $siteId;
 
-$result = $meli->get('$url', array('nickname' => 'RODIA2000'));
+$result = $meli->get($url, array('nickname' => 'RODIA2000'));
 echo '<pre>';
 print_r('<p>1$appId    -->'.$appId    .'</p>');
 print_r('<p>1$secretKey-->'.$secretKey.'</p>');
