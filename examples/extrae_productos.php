@@ -7,9 +7,9 @@ $url = '/sites/' . $siteId. '/search';
 
 $result = $meli->get($url, $params);
 echo '<pre>';
-print_r('<p>2</p>');
+print_r('<p>3</p>');
 
-print_r($result['title']);
+print_r($result['body']);
 
 #foreach ($result as $i => $value) {
 #    unset($array[$i]);
