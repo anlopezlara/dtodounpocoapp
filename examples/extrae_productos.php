@@ -10,8 +10,8 @@ $url = '/items/MLM602329981';
 $result = $meli->get($url, $params);
 echo '<pre>';
 print_r('<p>2</p>');
-#print_r($result);
 
+print_r($result[body]);
 /*foreach ( $result as $key => &$value )
 {
     print_r('<p>'.$key  .'</p>');
