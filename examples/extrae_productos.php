@@ -9,7 +9,7 @@ $result = $meli->get($url, $params);
 echo '<pre>';
 print_r('<p>4</p>');
 
-print_r($result["body"]['paging']);
+print_r($result["body"]["paging"]);
 /*foreach($result["body"] as $nivel => $value) { 
 	print_r($value);
 	print_r('<p>####################VAVLUE######################################</p>');
