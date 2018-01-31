@@ -8,5 +8,5 @@ $url = '/sites/' . $siteId. '/search';
 $result = $meli->get($url, $params);
 echo '<pre>';
 print_r('<p>5</p>');
-print_r($result);
+print_r($result[0]);
 echo '</pre>';
