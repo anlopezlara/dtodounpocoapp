@@ -66,11 +66,6 @@ $appName = explode('.', $domain)[0];
 					?>
                 </div>
 			</div>
-			<div class="row">
-				<div class="col-sm-6 col-md-6">
-					echo '<a href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Login using MercadoLibre oAuth 2.0</a>';
-				</div>
-			</div>
         </main>
     </body>
 
