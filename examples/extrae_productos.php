@@ -21,7 +21,8 @@ print_r('<p>************************************************************</p>');
 while(list(,$key) = each($result))
 {
     list(,$value) = each($result);
-    echo "$key: $value\n";
+    #echo "$key: $value\n";
+	print_r('<p>'.$value.'</p>');
 }
 
 print_r($result);
