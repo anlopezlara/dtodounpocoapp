@@ -74,7 +74,7 @@ echo $gender;
 			  FROM i3120427_doli1.doli_product
 			 WHERE ref in ('T0057','T0338')";
 	$result = $conn->query($sql);
-	echo "Prueba 2";
+	echo "Prueba_1 ";
 	if ($result->num_rows > 0) {
 		// output data of each row
 		while($row = $result->fetch_assoc()) {
@@ -83,7 +83,7 @@ echo $gender;
 	} else {
 		echo "0 results";
 	}
-	echo "Prueba 3";
+	echo "Prueba_3";
 	$conn->close();
 
 
