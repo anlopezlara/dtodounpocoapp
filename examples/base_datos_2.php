@@ -4,6 +4,8 @@
 </form>
 
 <?php
+require '../Meli/meli.php';
+require '../configApp.php';
 $servername = "www.d-todounpoco.com.mx";
 $username = "anlopez";
 $password = "Azteca02";
