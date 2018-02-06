@@ -1,14 +1,22 @@
+<?php
+require '../Meli/meli.php';
+require '../configApp.php';
+$meli = new Meli($appId, $secretKey);
+#$params = array('Producto'=>'MLM602329981');
+$params = array();
+#$url = '/sites/' . $siteId. '/items/MLM602329981';
+$url = '/items/MLM602329981';
+$servername = "www.d-todounpoco.com.mx";
+$username = "anlopez";
+$password = "Azteca02";
+?>
+
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
     <input type="text" name="studentname">
     <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->
 </form>
 
 <?php
-require '../Meli/meli.php';
-require '../configApp.php';
-$servername = "www.d-todounpoco.com.mx";
-$username = "anlopez";
-$password = "Azteca02";
 function display()
 {
     echo "hello ".$_POST["studentname"];
