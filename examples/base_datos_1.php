@@ -10,11 +10,9 @@ print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'"> 
 print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 print '</form>';
 
-#function display($servername_,$username_,$password_)
-function display()
+function display($servername_,$username_,$password_)
 {
-	#$conn = new mysqli($servername_, $username_, $password_);
-	$conn = new mysqli($servername, $username, $password);
+	$conn = new mysqli($servername_, $username_, $password_);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	} 
@@ -34,6 +32,5 @@ function display()
 }
 if(isset($_POST['submit']))
 {
-   #display($servername,$username,$password);
-   display();
+   display($servername,$username,$password);
 } 
