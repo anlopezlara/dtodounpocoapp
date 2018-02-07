@@ -47,13 +47,13 @@ print '<html>';
 				// output data of each row
 				print '<table class="border" width="100%">';
 				while($row = $result->fetch_assoc()) {
-					echo "<tr>";
-					echo "<td>".$row["ref"]. "</td><td>" . $row["accountancy_code_sell"]." </td><td>".$row["label"]." </td><td>" . $row["price"]."</td><td>" . $row["stock"]."</td>";
-					echo "</tr>";
+					print "<tr>";
+					print "<td>".$row["ref"]. "</td><td>" . $row["accountancy_code_sell"]." </td><td>".$row["label"]." </td><td>" . $row["price"]."</td><td>" . $row["stock"]."</td>";
+					print "</tr>";
 				}
 				print '</table>';
 			} else {
-				echo "0 results";
+				print "0 results";
 			}
 		}
 		if(isset($_POST['submit']))
