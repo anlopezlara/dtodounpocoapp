@@ -13,23 +13,16 @@ $servername = "www.d-todounpoco.com.mx";
 $username = "anlopez";
 $password = "Azteca02";
 
-function display()
+function display($servername_,$username_,$password_)
 {
-	echo "Prueba_11111111111";
-	$servername = "www.d-todounpoco.com.mx";
-	$username = "anlopez";
-	$password = "Azteca02";
+	#$servername = "www.d-todounpoco.com.mx";
+	#$username = "anlopez";
+	#$password = "Azteca02";
 
-	#$conn = new mysqli("www.d-todounpoco.com.mx", "anlopez", "Azteca02");
-	$conn = new mysqli($servername, $username, $password);
-	echo "Prueba_2";
+	$conn = new mysqli($servername_, $username_, $password_);
 	if ($conn->connect_error) {
-		echo "Prueba_3";
 		die("Connection failed: " . $conn->connect_error);
-		echo "Prueba_4";
 	} 
-	echo "Prueba_5";
-
 	$sql = "SELECT ref, label, price, accountancy_code_sell, stock
 			  FROM i3120427_doli1.doli_product
 			 WHERE ref in ('T0057','T0338')";
@@ -46,5 +39,5 @@ function display()
 }
 if(isset($_POST['submit']))
 {
-   display();
+   display($servername,$username,$password);
 } 
