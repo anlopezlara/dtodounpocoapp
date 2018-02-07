@@ -17,7 +17,7 @@ function display($servername_,$username_,$password_)
 	#$servername = "www.d-todounpoco.com.mx";
 	#$username = "anlopez";
 	#$password = "Azteca02";
-     echo "******************************";
+     echo "XXXXXXXX";
 	$conn = new mysqli($servername_, $username_, $password_);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);

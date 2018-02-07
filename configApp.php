@@ -10,13 +10,16 @@ $secretKey = getenv('Secret_Key');
 
 /* The Redirect url */
 
-
 /* The site id of the country where your application will work.
 If you don't know your site_id go to our sites resources: https://api.mercadolibre.com/sites  */
 $siteId = 'MLM';
 
 $nickname = getenv('nickname');
 
+/* My SQL database */
+$servername = getenv('servername');
+$username = getenv('username');
+$password = getenv('password');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //If you don't use Heroku use the next config
