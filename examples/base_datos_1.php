@@ -48,6 +48,7 @@ print '<html>';
 			if ($result->num_rows > 0) {
 				// output data of each row
 				print '<table class="border" width="100%">';
+				print "<td>ID Dolibar</td><td>ID MercLibre </td><td>Descripción</td><td>Precio Dolibar</td><td>Stock Dolibar</td>";
 				while($row = $result->fetch_assoc()) {
 					print "<tr>";
 					print "<td>".$row["ref"]. "</td><td>" . $row["accountancy_code_sell"]." </td><td>".$row["label"]." </td><td>" . $row["price"]."</td><td>" . $row["stock"]."</td>";
