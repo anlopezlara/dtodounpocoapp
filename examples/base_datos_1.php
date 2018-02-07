@@ -6,9 +6,9 @@ $meli = new Meli($appId, $secretKey);
 $params = array();
 $url = '/items/MLM602329981';
 
-$servername = $_SESSION['servername'];
-$username   = $_SESSION['username'  ];
-$password   = $_SESSION['password'  ];
+#$servername = $_SESSION['servername'];
+#$username   = $_SESSION['username'  ];
+#$password   = $_SESSION['password'  ];
 
 #$servername = "www.d-todounpoco.com.mx";
 #$username = "anlopez";
