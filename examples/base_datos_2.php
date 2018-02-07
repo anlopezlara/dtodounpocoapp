@@ -10,16 +10,13 @@ $servername = "www.d-todounpoco.com.mx";
 $username = "anlopez";
 $password = "Azteca02";
 
-#print '<form method="post" name="sel" action="'.$_SERVER['PHP_SELF'].'">';
 print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
-print '    <input type="text" name="studentname"> ';
 print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 print '</form>';
 
 
 function display()
 {
-    echo "hello ".$_POST["studentname"];
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
 
@@ -50,4 +47,3 @@ if(isset($_POST['submit']))
 {
    display();
 } 
-?>
