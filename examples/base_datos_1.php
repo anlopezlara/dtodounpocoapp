@@ -4,21 +4,20 @@ require '../configApp.php';
 $meli = new Meli($appId, $secretKey);
 $params = array();
 $url = '/items/MLM602329981';
+$servername = isset($_SESSION['servername']);
+$username = isset($_SESSION['username']);
+$password = isset($_SESSION['password']);
 
 print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 print '</form>';
-
-$servername = "www.d-todounpoco.com.mx";
-$username = "anlopez";
-$password = "Azteca02";
 
 function display($servername_,$username_,$password_)
 {
 	#$servername = "www.d-todounpoco.com.mx";
 	#$username = "anlopez";
 	#$password = "Azteca02";
-
+     echo "******************************";
 	$conn = new mysqli($servername_, $username_, $password_);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
