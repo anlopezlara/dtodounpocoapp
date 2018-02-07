@@ -9,14 +9,13 @@ $url = '/items/MLM602329981';
 $servername = "www.d-todounpoco.com.mx";
 $username = "anlopez";
 $password = "Azteca02";
-?>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-    <input type="text" name="studentname">
-    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->
-</form>
 
-<?php
+print '<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">';
+print '    <input type="text" name="studentname">';
+print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
+print '</form>';
+
 function display()
 {
     echo "hello ".$_POST["studentname"];
