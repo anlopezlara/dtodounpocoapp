@@ -39,14 +39,14 @@ print '</form>';
 function display()
 {
 	echo "Prueba_1";
-	
-	$conn = new mysqli($servername, $username, $password);
-
-	
+	$conn = new mysqli("www.d-todounpoco.com.mx", "anlopez", "Azteca02");
+	echo "Prueba_2";	
 	if ($conn->connect_error) {
+		echo "Prueba_3";
 		die("Connection failed: " . $conn->connect_error);
+		echo "Prueba_4";
 	} 
-	echo "Prueba";
+	echo "Prueba_5";
 
 	$sql = "SELECT ref, label, price, accountancy_code_sell, stock
 			  FROM i3120427_doli1.doli_product
