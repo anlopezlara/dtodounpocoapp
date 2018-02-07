@@ -15,10 +15,14 @@ $password = "Azteca02";
 
 function display()
 {
-	echo "Prueba_1";
-	$conn = new mysqli("www.d-todounpoco.com.mx", "anlopez", "Azteca02");
-	#$conn = new mysqli($servername, $username, $password);
-	echo "Prueba_2";	
+	echo "Prueba_11111111111";
+	$servername = "www.d-todounpoco.com.mx";
+	$username = "anlopez";
+	$password = "Azteca02";
+
+	#$conn = new mysqli("www.d-todounpoco.com.mx", "anlopez", "Azteca02");
+	$conn = new mysqli($servername, $username, $password);
+	echo "Prueba_2";
 	if ($conn->connect_error) {
 		echo "Prueba_3";
 		die("Connection failed: " . $conn->connect_error);
