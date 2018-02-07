@@ -5,9 +5,11 @@ require '../configApp.php';
 $meli = new Meli($appId, $secretKey);
 $params = array();
 $url = '/items/MLM602329981';
-$servername = isset($_GET['servername']);
-$username = isset($_GET['username']);
-$password = isset($_GET['password']);
+
+$servername = $_SESSION['servername'];
+$username   = $_SESSION['username'  ];
+$password   = $_SESSION['password'  ];
+
 #$servername = "www.d-todounpoco.com.mx";
 #$username = "anlopez";
 #$password = "Azteca02";
