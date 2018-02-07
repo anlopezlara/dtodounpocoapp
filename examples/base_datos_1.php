@@ -26,7 +26,7 @@ function display($servername_,$username_,$password_)
 		print '<table class="border" width="100%">';
 		while($row = $result->fetch_assoc()) {
 			echo "<tr>";
-			echo "<td>ref: " . $row["ref"]. " </td><td> label: " . $row["label"]. " " . " </td><td> price: " . $row["price"]. " </td><td> accountancy_code_sell: " . $row["accountancy_code_sell"]. " </td><td> stock: " . $row["stock"]."</td>";
+			echo "<td>".$row["ref"]. "</td><td>".$row["label"]." </td><td>" . $row["price"]."</td><td>" . $row["accountancy_code_sell"]." </td><td>" . $row["stock"]."</td>";
 			echo "</tr>";
 		}
 		print '</table>';
