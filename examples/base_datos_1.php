@@ -38,9 +38,10 @@ print '<html>';
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 			} 
-			$sql = "SELECT ref, label, price, accountancy_code_sell, stock
+			$sql = "SELECT *#ref, label, price, accountancy_code_sell, stock
 					  FROM i3120427_doli1.doli_product
-					  WHERE accountancy_code_sell is not null";
+					 WHERE accountancy_code_sell != ''
+					   AND substring(ref,1,1) = 'T'";
 					 //WHERE ref in ('T0057','T0338')";
 			$result = $conn->query($sql);
 
