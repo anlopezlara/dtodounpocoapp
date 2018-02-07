@@ -23,9 +23,11 @@ function display($servername_,$username_,$password_)
 
 	if ($result->num_rows > 0) {
 		// output data of each row
+		print '<table class="border" width="100%">';
 		while($row = $result->fetch_assoc()) {
 			echo "<p>ref: " . $row["ref"]. " - label: " . $row["label"]. " " . " - price: " . $row["price"]. " - accountancy_code_sell: " . $row["accountancy_code_sell"]. " - stock: " . $row["stock"]. "</p>";
 		}
+		print '</table>';
 	} else {
 		echo "0 results";
 	}
