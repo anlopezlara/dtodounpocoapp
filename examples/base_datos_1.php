@@ -16,8 +16,8 @@ $password = "Azteca02";
 function display()
 {
 	echo "Prueba_1";
-	#$conn = new mysqli("www.d-todounpoco.com.mx", "anlopez", "Azteca02");
-	$conn = new mysqli($servername, $username, $password);
+	$conn = new mysqli("www.d-todounpoco.com.mx", "anlopez", "Azteca02");
+	#$conn = new mysqli($servername, $username, $password);
 	echo "Prueba_2";	
 	if ($conn->connect_error) {
 		echo "Prueba_3";
