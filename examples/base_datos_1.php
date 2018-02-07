@@ -4,9 +4,12 @@ require '../configApp.php';
 $meli = new Meli($appId, $secretKey);
 $params = array();
 $url = '/items/MLM602329981';
-$servername = isset($_SESSION['servername']);
-$username = isset($_SESSION['username']);
-$password = isset($_SESSION['password']);
+#$servername = isset($_SESSION['servername']);
+#$username = isset($_SESSION['username']);
+#$password = isset($_SESSION['password']);
+$servername = "www.d-todounpoco.com.mx";
+$username = "anlopez";
+$password = "Azteca02";
 
 print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
