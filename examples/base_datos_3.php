@@ -37,7 +37,25 @@ print '<html>';
 			print 'params_-->'.$params_;
 			print 'url_-->'.$url_;
 			$resultml = $meli_->get($url_, $params_);
-			print_r($resultml[body]);
+			//print_r($resultml[body]);
+			foreach ( $result[body] as $key => &$value )
+			{
+				if ($key == 'id') {
+					print_r('<p>'.$key.' -->'.$value.'</p>');
+				}
+				if ($key == 'title') {
+					print_r('<p>'.$key.' -->'.$value.'</p>');
+				}
+				if ($key == 'price') {
+					print_r('<p>'.$key.' -->'.$value.'</p>');
+				}
+				if ($key == 'available_quantity') {
+					print_r('<p>'.$key.' -->'.$value.'</p>');
+				}
+				if ($key == 'status') {
+					print_r('<p>'.$key.' -->'.$value.'</p>');
+				}
+			}
 			$conn = new mysqli($servername_, $username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
