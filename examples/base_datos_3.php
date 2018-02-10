@@ -38,7 +38,7 @@ print '<html>';
 			print 'url_-->'.$url_;
 			$resultml = $meli_->get($url_, $params_);
 			//print_r($resultml[body]);
-			foreach ( $result[body] as $key => &$value )
+			foreach ( $resultml[body] as $key => &$value )
 			{
 				if ($key == 'id') {
 					print_r('<p>'.$key.' -->'.$value.'</p>');
