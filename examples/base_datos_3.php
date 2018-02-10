@@ -55,25 +55,25 @@ print '<html>';
 				print '<table class="border" width="100%">';
 				print "<td>ID Dolibar</td><td>ID MercLibre </td><td>Descripción</td><td>Precio Dolibar</td><td>Stock Dolibar</td>";
 				while($row = $result->fetch_assoc()) {
-					$resultml = $meli->get($url, $params);
-					foreach ( $result[body] as $key => &$value )
-					{
-						if ($key == 'id') {
-							print_r('<p>'.$key.' -->'.$value.'</p>');
-						}
-						if ($key == 'title') {
-							print_r('<p>'.$key.' -->'.$value.'</p>');
-						}
-						if ($key == 'price') {
-							print_r('<p>'.$key.' -->'.$value.'</p>');
-						}
-						if ($key == 'available_quantity') {
-							print_r('<p>'.$key.' -->'.$value.'</p>');
-						}
-						if ($key == 'status') {
-							print_r('<p>'.$key.' -->'.$value.'</p>');
-						}
-					}
+					//$resultml = $meli->get($url, $params);
+					//foreach ( $result[body] as $key => &$value )
+					//{
+					//	if ($key == 'id') {
+					//		print_r('<p>'.$key.' -->'.$value.'</p>');
+					//	}
+					//	if ($key == 'title') {
+					//		print_r('<p>'.$key.' -->'.$value.'</p>');
+					//	}
+					//	if ($key == 'price') {
+					//		print_r('<p>'.$key.' -->'.$value.'</p>');
+					//	}
+					//	if ($key == 'available_quantity') {
+					//		print_r('<p>'.$key.' -->'.$value.'</p>');
+					//	}
+					//	if ($key == 'status') {
+					//		print_r('<p>'.$key.' -->'.$value.'</p>');
+					//	}
+					//}
 					print "<tr>";
 					print "<td>".$row["ref"]. "</td><td>" . $row["accountancy_code_sell"]." </td><td>".$row["label"]." </td><td>" . $row["price"]."</td><td>" . $row["stock"]."</td>";
 					print "</tr>";
