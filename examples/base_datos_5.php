@@ -85,16 +85,16 @@ print '<html>';
 										`PRECIO_MELI`,
 										`CANTIDAD_MELI`,
 										`ESTATUS_MELI`)
-							     VALUES(".$row["ref"]                  .",
-										".$row["accountancy_code_sell"].",
-										".$precio	                   .",
-										".$cantidad                    .",
-										".$estatus                     .")";
+							     VALUES('".$row["ref"]                  ."',
+										 ".$row["accountancy_code_sell"].",
+										 ".$precio	                    .",
+										 ".$cantidad                    .",
+										'".$estatus                     ."')";
 					
-					print $sql;
+					//print $sql;
 					
-					//$statement = $conn->prepare($sql);
-					//$statement->execute();
+					$statement = $conn->prepare($sql);
+					$statement->execute();
 					
 					print "<tr>";
 					print "<td>".$row["ref"]                  ."</td>
