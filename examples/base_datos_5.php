@@ -79,7 +79,7 @@ print '<html>';
 						}
 					}
 					
-					$sql = "INSERT INTO 'db_dtodounpoco'.'CARGA_MELI'
+					/*$sql = "INSERT INTO 'db_dtodounpoco'.'CARGA_MELI'
 							           ('ID_DOLIBAR'   ,
 							            'ID_MELI'	   ,
 										'PRECIO_MELI'  ,
@@ -92,7 +92,7 @@ print '<html>';
 										".$estatus                     .")";
 					
 					$statement = $conn->prepare($sql);
-					$statement->execute();
+					$statement->execute();*/
 					
 					print "<tr>";
 					print "<td>".$row["ref"]                  ."</td>
