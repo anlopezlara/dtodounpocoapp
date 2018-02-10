@@ -73,7 +73,10 @@ print '<html>';
 					       <td>".$row["accountancy_code_sell"]."</td>
 						   <td>".$row["label"]                ."</td>
 						   <td>".$row["price"]                ."</td>
-						   <td>".$row["stock"]				  ."</td>";
+						   <td>".$row["stock"]				  ."</td>
+						   <td>".$precio				  	  ."</td>
+						   <td>".$cantidad				  	  ."</td>
+						   <td>".$estatus				  	  ."</td>";
 					print "</tr>";
 				}
 				print '</table>';
