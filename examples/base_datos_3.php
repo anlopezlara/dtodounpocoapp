@@ -32,8 +32,11 @@ print '<html>';
 		print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 		print '</form>';
 
-		function display($servername_,$username_,$password_)
+		function display($servername_,$username_,$password_,$meli_,$params_,$url_)
 		{
+			print 'meli_-->'.$meli_;
+			print 'params_-->'.$params_;
+			print 'url_-->'.$url_;
 			$conn = new mysqli($servername_, $username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
@@ -62,7 +65,7 @@ print '<html>';
 		}
 		if(isset($_POST['submit']))
 		{
-		   display($servername,$username,$password);
+		   display($servername,$username,$password,$meli,$params,$url);
 		} 
 	print '</body>';
 print '</html>';
