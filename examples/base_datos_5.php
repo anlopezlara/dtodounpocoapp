@@ -79,12 +79,12 @@ print '<html>';
 						}
 					}
 					
-					/*$sql = "INSERT INTO 'db_dtodounpoco'.'CARGA_MELI'
-							           ('ID_DOLIBAR'   ,
-							            'ID_MELI'	   ,
-										'PRECIO_MELI'  ,
-										'CANTIDAD_MELI',
-										'ESTATUS_MELI')
+					$sql = "INSERT INTO `db_dtodounpoco`.`CARGA_MELI`
+									   (`ID_DOLIBAR`,
+										`ID_MELI`,
+										`PRECIO_MELI`,
+										`CANTIDAD_MELI`,
+										`ESTATUS_MELI`)
 							     VALUES(".$row["ref"]                  .",
 										".$row["accountancy_code_sell"].",
 										".$precio	                   .",
@@ -92,7 +92,7 @@ print '<html>';
 										".$estatus                     .")";
 					
 					$statement = $conn->prepare($sql);
-					$statement->execute();*/
+					$statement->execute();
 					
 					print "<tr>";
 					print "<td>".$row["ref"]                  ."</td>
