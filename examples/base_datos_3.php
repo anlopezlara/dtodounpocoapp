@@ -36,6 +36,8 @@ print '<html>';
 		{
 			print 'params_-->'.$params_;
 			print 'url_-->'.$url_;
+			$resultml = $meli_->get($url_, $params_);
+			print_r($resultml[body]);
 			$conn = new mysqli($servername_, $username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
