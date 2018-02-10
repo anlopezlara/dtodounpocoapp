@@ -54,7 +54,7 @@ print '<html>';
 				print "<td>ID Dolibar</td><td>ID MercLibre </td><td>Descripción</td><td>Precio Dolibar</td><td>Stock Dolibar</td>";
 				while($row = $result->fetch_assoc()) {
 					
-					$resultml = $meli_->get($url_, $params_);
+					$resultml = $meli_->get('/items/MLM'.$row["accountancy_code_sell"], $params_);
 					foreach ( $resultml[body] as $key => &$value )
 					{
 						if ($key == 'price') {
