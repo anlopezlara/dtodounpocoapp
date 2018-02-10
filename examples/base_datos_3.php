@@ -49,10 +49,17 @@ print '<html>';
 			if ($result->num_rows > 0) {
 				// output data of each row
 				print '<table class="border" width="100%">';
-				print "<td>ID Dolibar</td><td>ID MercLibre </td><td>Descripción</td><td>Precio Dolibar</td><td>Stock Dolibar</td>";
+				print "<td>ID Dolibar</td>
+				       <td>ID MercLibre</td>
+					   <td>Descripción</td>
+					   <td>Precio Dolibar</td>
+					   <td>Stock Dolibar</td>
+					   <td>Precio ML</td>
+					   <td>Cantidad ML</td>
+					   <td>Estatus ML</td>";
 				while($row = $result->fetch_assoc()) {
 					
-					$resultml = $meli_->get(,$url_.$row["accountancy_code_sell"], $params_);
+					$resultml = $meli_->get($url_.$row["accountancy_code_sell"], $params_);
 					foreach ( $resultml[body] as $key => &$value )
 					{
 						if ($key == 'price') {
