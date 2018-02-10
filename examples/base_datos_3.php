@@ -36,26 +36,6 @@ print '<html>';
 		{
 			print 'params_-->'.$params_;
 			print 'url_-->'.$url_;
-			$resultml = $meli_->get($url_, $params_);
-			//print_r($resultml[body]);
-			foreach ( $resultml[body] as $key => &$value )
-			{
-				if ($key == 'id') {
-					print_r('<p>'.$key.' -->'.$value.'</p>');
-				}
-				if ($key == 'title') {
-					print_r('<p>'.$key.' -->'.$value.'</p>');
-				}
-				if ($key == 'price') {
-					print_r('<p>'.$key.' -->'.$value.'</p>');
-				}
-				if ($key == 'available_quantity') {
-					print_r('<p>'.$key.' -->'.$value.'</p>');
-				}
-				if ($key == 'status') {
-					print_r('<p>'.$key.' -->'.$value.'</p>');
-				}
-			}
 			$conn = new mysqli($servername_, $username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
@@ -73,8 +53,27 @@ print '<html>';
 				print '<table class="border" width="100%">';
 				print "<td>ID Dolibar</td><td>ID MercLibre </td><td>Descripción</td><td>Precio Dolibar</td><td>Stock Dolibar</td>";
 				while($row = $result->fetch_assoc()) {
+					
+					$resultml = $meli_->get($url_, $params_);
+					foreach ( $resultml[body] as $key => &$value )
+					{
+						if ($key == 'price') {
+							$precio = $value;
+						}
+						if ($key == 'available_quantity') {
+							$cantidad = $value;
+						}
+						if ($key == 'status') {
+							$estatus = $value;
+						}
+					}
+					
 					print "<tr>";
-					print "<td>".$row["ref"]. "</td><td>" . $row["accountancy_code_sell"]." </td><td>".$row["label"]." </td><td>" . $row["price"]."</td><td>" . $row["stock"]."</td>";
+					print "<td>".$row["ref"]                  ."</td>
+					       <td>".$row["accountancy_code_sell"]."</td>
+						   <td>".$row["label"]                ."</td>
+						   <td>".$row["price"]                ."</td>
+						   <td>".$row["stock"]				  ."</td>";
 					print "</tr>";
 				}
 				print '</table>';
