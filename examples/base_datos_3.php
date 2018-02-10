@@ -4,7 +4,7 @@ require '../Meli/meli.php';
 require '../configApp.php';
 $meli = new Meli($appId, $secretKey);
 $params = array();
-$url = '/items/MLM602329981';
+$url = '/items/MLM';
 print '<!DOCTYPE html>';
 print '<html>';
 	print '<head>';
@@ -34,8 +34,6 @@ print '<html>';
 
 		function display($servername_,$username_,$password_,$meli_,$params_,$url_)
 		{
-			print 'params_-->'.$params_;
-			print 'url_-->'.$url_;
 			$conn = new mysqli($servername_, $username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
@@ -54,7 +52,7 @@ print '<html>';
 				print "<td>ID Dolibar</td><td>ID MercLibre </td><td>Descripción</td><td>Precio Dolibar</td><td>Stock Dolibar</td>";
 				while($row = $result->fetch_assoc()) {
 					
-					$resultml = $meli_->get('/items/MLM'.$row["accountancy_code_sell"], $params_);
+					$resultml = $meli_->get(,$url_.$row["accountancy_code_sell"], $params_);
 					foreach ( $resultml[body] as $key => &$value )
 					{
 						if ($key == 'price') {
