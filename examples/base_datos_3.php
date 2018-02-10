@@ -41,7 +41,7 @@ print '<html>';
 			$sql = "SELECT *#ref, label, price, accountancy_code_sell, stock
 					  FROM i3120427_doli1.doli_product
 					 WHERE accountancy_code_sell != ''
-					   AND ref in ('T0057','T0338')";
+					   AND substring(ref,1,1) = 'T'";
 					 // AND substring(ref,1,1) = 'T'";
 					 //WHERE ref in ('T0057','T0338')";
 			$result = $conn->query($sql);
