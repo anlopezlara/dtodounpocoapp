@@ -28,6 +28,7 @@ print '<html>';
 	print '</head>';
 	
 	print '<body>';
+		print 'meli-->'.$meli;
 		print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 		print '    <input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 		print '</form>';
