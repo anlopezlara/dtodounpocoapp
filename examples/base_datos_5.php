@@ -91,8 +91,10 @@ print '<html>';
 										".$cantidad                    .",
 										".$estatus                     .")";
 					
-					$statement = $conn->prepare($sql);
-					$statement->execute();
+					print $sql;
+					
+					//$statement = $conn->prepare($sql);
+					//$statement->execute();
 					
 					print "<tr>";
 					print "<td>".$row["ref"]                  ."</td>
