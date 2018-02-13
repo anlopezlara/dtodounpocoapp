@@ -2,11 +2,15 @@
 session_start();
 require '../Meli/meli.php';
 require '../configApp.php';
-print_r('appId-->'.$appId);
-print_r('secretKey-->'.$secretKey);
+print_r('<p>appId-->'.$appId.'</p>');
+print_r('<p>secretKey-->'.$secretKey.'</p>');
 $meli = new Meli($appId, $secretKey);
 if(isset($_GET['code']) || isset($_SESSION['access_token'])) {
 	// If code exist and session is empty
+	
+	print_r('<p>code-->'.$_GET['code'].'</p>');
+	print_r('<p>access_token-->'.$_SESSION['access_token'].'</p>');
+	
 	if(isset($_GET['code']) && !isset($_SESSION['access_token'])) {
 		// //If the code was in get parameter we authorize
 		try{
