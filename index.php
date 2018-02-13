@@ -1,7 +1,7 @@
 <?php
 session_start();
-require '/Meli/meli.php';
-require '/configApp.php';
+require './Meli/meli.php';
+require './configApp.php';
 print_r('<p>appId-->'.$appId.'</p>');
 print_r('<p>secretKey-->'.$secretKey.'</p>');
 $meli = new Meli($appId, $secretKey);
