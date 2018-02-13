@@ -1,11 +1,11 @@
 <?php
 session_start();
-require '../Meli/meli.php';
-require '../configApp.php';
+require '/Meli/meli.php';
+require '/configApp.php';
 print_r('<p>appId-->'.$appId.'</p>');
 print_r('<p>secretKey-->'.$secretKey.'</p>');
 $meli = new Meli($appId, $secretKey);
-/*if(isset($_GET['code']) || isset($_SESSION['access_token'])) {
+if(isset($_GET['code']) || isset($_SESSION['access_token'])) {
 	// If code exist and session is empty
 	
 	print_r('<p>code-->'.$_GET['code'].'</p>');
@@ -43,4 +43,4 @@ $meli = new Meli($appId, $secretKey);
 	echo '</pre>';
 } else {
 	echo '<a href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Login using MercadoLibre oAuth 2.0</a>';
-}*/
+}
