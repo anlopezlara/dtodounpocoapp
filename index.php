@@ -16,6 +16,7 @@ if(isset($_GET['code']) || isset($_SESSION['access_token'])) {
 		print_r('<p>PASA 1</p>');
 		try{
 			print_r('<p>PASA 2</p>');
+			print_r('<p>redirectURI------------->'.$redirectURI.'</p>');
 			$user = $meli->authorize($_GET["code"], $redirectURI);
 			print_r('<p>PASA 3</p>');
 			// Now we create the sessions with the authenticated user
