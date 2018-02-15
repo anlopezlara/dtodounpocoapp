@@ -23,38 +23,13 @@ $appName = explode('.', $domain)[0];
     <body>
         <div class="header">
             <div>
-                <h1>Getting Started with Mercado Libre's PHP SDK</h1>
-                <h2>Official PHP SDK for Mercado Libre's API.</h2>
+                <h1>De todo un poco y Mercado libre</h1>
             </div>
         </div>
 
         <main class="container">
             <h3>Hi, Developer!</h3>
             <p>This is a sample app, deployed to Heroku with Mercado Libre's PHP SDK. Feel free to use it as a base, to start building your awesome app!</p>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>How it works?</h3>
-                    <ul>
-                        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/go-getting-started">Heroku Button</a> on the repository.</li>
-                        <li>When Heroku received the source code it used the go tool chain to compile the application along with any vendored dependencies and created a deployable slug.</li>
-                        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-                        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <h3>Next steps</h3>
-                    <p>To start, <a href="https://developers.mercadolibre.com.ar/apps/home">go to your My Apps dashboard</a> and update your application's <b>redirect URI</b> to match the one Heroku is running: <br />
-                        <code><?php echo 'https://'.$domain; ?></code>.
-                        <br />
-                        <br /> If you deployed this app by the Heroku Button, you need to clone this aplication to your computer by running the following on a command line shell:
-                        <br />
-                        <code>heroku git:clone -a <?php echo $appName; ?></code>
-                        <br /> This will create a local copy of the source code, and associate the Heroku app with your local repository.</p>
-                    <p>Follow the offical Heroku's guide <a target="_blank" href="https://devcenter.heroku.com/articles/git">https://devcenter.heroku.com/articles/git</a> to deploy using the Heroku cli.</p>
-                    <p>You'll now be set up to run the app locally, or deploy changes to Heroku.</p>
-                </div>
-            </div>
 
             <div class="row">
                 <h3>Examples</h3>
