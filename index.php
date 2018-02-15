@@ -28,19 +28,6 @@ $appName = explode('.', $domain)[0];
         </div>
 
         <main class="container">
-            <h3>Hi, Developer!</h3>
-            <p>This is a sample app, deployed to Heroku with Mercado Libre's PHP SDK. Feel free to use it as a base, to start building your awesome app!</p>
-
-            <div class="row">
-                <h3>Examples</h3>
-                <p>
-                    Check the following examples, they will help you to start working with our API!
-                </p>
-                <p>
-                    Note that these examples work for MLB(Brasil) by default. If you'd like to try them in your own country, please, <a href="https://github.com/mercadolibre/php-sdk/blob/master/configApp.php#L16">update this line</a> in your project, with
-                    your own <b>$site_id</b> before executing them.
-                </p>
-            </div>
             <hr>
             <div class="row">
                 <div class="col-sm-6 col-md-6">
