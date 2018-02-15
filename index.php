@@ -32,7 +32,7 @@ $appName = explode('.', $domain)[0];
             <div class="row">
                 <div class="col-sm-1 col-md-1">
                     <h3>Autentificar Mercado Libre</h3>
-                    <p>Presiones el botón para abrir sesión a mercado libre, si esta ya esta abierta deplegará el token</p>
+                    <p>Presiones el botón para abrir sesión a mercado libre, si la sesión ya esta abierta deplegará el token</p>
 
                     <?php
                     $meli = new Meli($appId, $secretKey);
