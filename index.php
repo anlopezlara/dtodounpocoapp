@@ -30,7 +30,7 @@ $appName = explode('.', $domain)[0];
         <main class="container">
             <hr>
             <div class="row">
-                <div class="col-sm-6 col-md-6">
+                <div class="col-sm-1 col-md-1">
                     <h3>oAuth</h3>
                     <p>First authenticate yourself. Authentication is the key to get the most ouf Mercado Libre's API.</p>
 
