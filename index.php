@@ -70,6 +70,13 @@ $appName = explode('.', $domain)[0];
 
                 </div>
             </div>
+			<div class="row">
+                <div class="col-sm-1 col-md-1">
+                    <h3>Get site</h3>
+                    <p>Make a simple GET to <a href="https://api.mercadolibre.com/sites">sites resource</a> with your <b>$site_id</b> to obtain information about a a site. Like id, name, currencies, categories, and other settings.</p>
+                    <p><a class="btn" href="../examples/example_get.php">GET</a></p>
+                </div>			
+			</div>
         </main>
     </body>
 
