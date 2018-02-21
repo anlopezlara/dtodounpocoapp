@@ -72,9 +72,23 @@ $appName = explode('.', $domain)[0];
 						$statement = $conn->prepare($sql);
 						$statement->execute();
                         
+						$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
+								   SET `valor` = '".$_SESSION['expires_in']."'
+								 WHERE id_valor = 'expires_in'";
+								 
+						$statement = $conn->prepare($sql);
+						$statement->execute();
+						
+						$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
+								   SET `valor` = '".$_SESSION['refresh_token']."'
+								 WHERE id_valor = 'refresh_token'";
+								 
+						$statement = $conn->prepare($sql);
+						$statement->execute();
+						
 						echo '<pre>';
                             print_r($_SESSION);
-							print_r($sql);
+							//print_r($sql);
 							//print_r($servername.' - '.$username.' - '.$password);
                         echo '</pre>';
                     } else {
