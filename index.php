@@ -36,12 +36,11 @@ $appName = explode('.', $domain)[0];
 
                     <?php
                     $meli = new Meli($appId, $secretKey);
-					$conn = new mysqli($servername, $username, $password);
-					if ($conn->connect_error) {
-						die("Connection failed: " . $conn->connect_error);
-					}
-					printr(.$servername.' - '.$username.' - '.$password);
-                    if($_GET['code'] || $_SESSION['access_token']) {
+					//$conn = new mysqli($servername, $username, $password);
+					//if ($conn->connect_error) {
+					//	die("Connection failed: " . $conn->connect_error);
+					//}
+					if($_GET['code'] || $_SESSION['access_token']) {
                         // If code exist and session is empty
                         if($_GET['code'] && !($_SESSION['access_token'])) {
                             // If the code was in get parameter we authorize
@@ -67,6 +66,7 @@ $appName = explode('.', $domain)[0];
                         }
                         echo '<pre>';
                             print_r($_SESSION);
+							printr($servername.' - '.$username.' - '.$password);
                         echo '</pre>';
                     } else {
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Autenticar</a></p>';
