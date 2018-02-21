@@ -36,10 +36,10 @@ $appName = explode('.', $domain)[0];
 
                     <?php
                     $meli = new Meli($appId, $secretKey);
-					//$conn = new mysqli($servername, $username, $password);
-					//if ($conn->connect_error) {
-					//	die("Connection failed: " . $conn->connect_error);
-					//}
+					$conn = new mysqli($servername, $username, $password);
+					if ($conn->connect_error) {
+						die("Connection failed: " . $conn->connect_error);
+					}
 					if($_GET['code'] || $_SESSION['access_token']) {
                         // If code exist and session is empty
                         if($_GET['code'] && !($_SESSION['access_token'])) {
