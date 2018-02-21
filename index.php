@@ -49,14 +49,6 @@ $appName = explode('.', $domain)[0];
                             $_SESSION['access_token'] = $user['body']->access_token;
                             $_SESSION['expires_in'] = time() + $user['body']->expires_in;
                             $_SESSION['refresh_token'] = $user['body']->refresh_token;
-							
-							$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
-					                   SET `valor` = '".$_SESSION['access_token']."'
-								     WHERE id_valor = 'access_token'";
-									 
-							$statement = $conn->prepare($sql);
-							$statement->execute();
-							
                         } else {
                             // We can check if the access token in invalid checking the time
                             if($_SESSION['expires_in'] < time()) {
@@ -67,20 +59,20 @@ $appName = explode('.', $domain)[0];
                                     $_SESSION['access_token'] = $refresh['body']->access_token;
                                     $_SESSION['expires_in'] = time() + $refresh['body']->expires_in;
                                     $_SESSION['refresh_token'] = $refresh['body']->refresh_token;
-									
-									$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
-											   SET `valor` = '".$_SESSION['access_token']."'
-											 WHERE id_valor = 'access_token'";
-									 
-									$statement = $conn->prepare($sql);
-									$statement->execute();
-									
                                 } catch (Exception $e) {
                                     echo "Exception: ",  $e->getMessage(), "\n";
                                 }
                             }
                         }
-                        echo '<pre>';
+						
+						$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
+								   SET `valor` = '".$_SESSION['access_token']."'
+								 WHERE id_valor = 'access_token'";
+								 
+								$statement = $conn->prepare($sql);
+								$statement->execute();
+                        
+						echo '<pre>';
                             print_r($_SESSION);
 							//print_r($sql);
 							print_r($servername.' - '.$username.' - '.$password);
