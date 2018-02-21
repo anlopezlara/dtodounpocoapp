@@ -3,7 +3,8 @@ session_start();
 require '../Meli/meli.php';
 require '../configApp.php';
 
-$conn = new mysqli($servername_, $username_, $password_);
+$meli = new Meli($appId, $secretKey);
+$conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
