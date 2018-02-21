@@ -69,13 +69,13 @@ $appName = explode('.', $domain)[0];
 								   SET `valor` = '".$_SESSION['access_token']."'
 								 WHERE id_valor = 'access_token'";
 								 
-								$statement = $conn->prepare($sql);
-								$statement->execute();
+						$statement = $conn->prepare($sql);
+						$statement->execute();
                         
 						echo '<pre>';
                             print_r($_SESSION);
-							//print_r($sql);
-							print_r($servername.' - '.$username.' - '.$password);
+							print_r($sql);
+							//print_r($servername.' - '.$username.' - '.$password);
                         echo '</pre>';
                     } else {
                         echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Autenticar</a></p>';
