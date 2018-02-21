@@ -82,7 +82,7 @@ $appName = explode('.', $domain)[0];
                         }
                         echo '<pre>';
                             print_r($_SESSION);
-							print_r($_SESSION['access_token']);
+							print_r($sql);
 							print_r($servername.' - '.$username.' - '.$password);
                         echo '</pre>';
                     } else {
