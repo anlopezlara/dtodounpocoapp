@@ -72,9 +72,9 @@ $appName = explode('.', $domain)[0];
             </div>
 			<div class="row">
                 <div class="col-sm-1 col-md-1">
-                    <h3>Get site</h3>
-                    <p>Preguntas d-Totonupoco</p>
-                    <p><a class="btn" href="../examples/preguntas_01.php">GET</a></p>
+                    <h3>Preguntas d-Totonupoco</h3>
+                    <p>Preguntas d-Totonupoco es necezario estar autenticado</p>
+                    <p><a class="btn" href="../examples/preguntas_01.php">Preguntas</a></p>
                 </div>			
 			</div>
         </main>
