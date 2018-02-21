@@ -9,7 +9,7 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT * FROM sesion_meli";
+$sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 
 $result = $conn->query($sql);
 
