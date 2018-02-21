@@ -54,8 +54,8 @@ $appName = explode('.', $domain)[0];
 					                   SET `valor` = '".$_SESSION['access_token']."'
 								     WHERE id_valor = access_token";
 									 
-							$statement = $conn->prepare($sql);
-							$statement->execute();
+							//$statement = $conn->prepare($sql);
+							//$statement->execute();
 							
                         } else {
                             // We can check if the access token in invalid checking the time
@@ -72,8 +72,8 @@ $appName = explode('.', $domain)[0];
 											   SET `valor` = '".$_SESSION['access_token']."'
 											 WHERE id_valor = access_token";
 									 
-									$statement = $conn->prepare($sql);
-									$statement->execute();
+									//$statement = $conn->prepare($sql);
+									//$statement->execute();
 									
                                 } catch (Exception $e) {
                                     echo "Exception: ",  $e->getMessage(), "\n";
@@ -82,6 +82,7 @@ $appName = explode('.', $domain)[0];
                         }
                         echo '<pre>';
                             print_r($_SESSION);
+							print_r($_SESSION['access_token']);
 							print_r($servername.' - '.$username.' - '.$password);
                         echo '</pre>';
                     } else {
