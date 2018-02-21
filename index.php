@@ -31,11 +31,16 @@ $appName = explode('.', $domain)[0];
             <hr>
             <div class="row">
                 <div class="col-sm-1 col-md-1">
-                    <h3>Autentificar Mercado Libre</h3>
+                    <h3>Autenticar Mercado Libre</h3>
                     <p>Presiona el botón para abrir sesión a mercado libre, si la sesión ya esta abierta deplegará el token</p>
 
                     <?php
                     $meli = new Meli($appId, $secretKey);
+					$conn = new mysqli($servername, $username, $password);
+					if ($conn->connect_error) {
+						die("Connection failed: " . $conn->connect_error);
+					}
+					printr(.$servername.' - '.$username.' - '.$password);
                     if($_GET['code'] || $_SESSION['access_token']) {
                         // If code exist and session is empty
                         if($_GET['code'] && !($_SESSION['access_token'])) {
@@ -64,7 +69,7 @@ $appName = explode('.', $domain)[0];
                             print_r($_SESSION);
                         echo '</pre>';
                     } else {
-                        echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Authenticate</a></p>';
+                        echo '<p><a alt="Login using MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Autenticar</a></p>';
                     }
                     ?>
 
@@ -73,7 +78,7 @@ $appName = explode('.', $domain)[0];
 			<div class="row">
                 <div class="col-sm-1 col-md-1">
                     <h3>Preguntas D-TodoUnPoco</h3>
-                    <p>Preguntas D-TodoUnPoco es necezario estar autenticado</p>
+                    <p>Preguntas D-TodoUnPoco es necesario estar autenticado</p>
                     <p><a class="btn" href="../examples/preguntas_01.php">Preguntas</a></p>
                 </div>			
 			</div>
