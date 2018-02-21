@@ -52,7 +52,7 @@ $appName = explode('.', $domain)[0];
 							
 							$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
 					                   SET `valor` = '".$_SESSION['access_token']."'
-								     WHERE id_valor = access_token";
+								     WHERE id_valor = 'access_token'";
 									 
 							//$statement = $conn->prepare($sql);
 							//$statement->execute();
@@ -70,7 +70,7 @@ $appName = explode('.', $domain)[0];
 									
 									$sql = "UPDATE `db_dtodounpoco`.`sesion_meli`
 											   SET `valor` = '".$_SESSION['access_token']."'
-											 WHERE id_valor = access_token";
+											 WHERE id_valor = 'access_token'";
 									 
 									//$statement = $conn->prepare($sql);
 									//$statement->execute();
