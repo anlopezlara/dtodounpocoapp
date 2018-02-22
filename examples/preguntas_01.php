@@ -17,7 +17,7 @@ $result = $conn->query($sql);
 print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
-		echo $now->format( 'd-m-Y' ), "\n";
+		echo $now->format('Y-m-d H:i:s'), "\n";
 		if ($result->num_rows > 0) {
 			//echo '<p>'.$result.'</p>';
 			while($row = $result->fetch_assoc()) {
