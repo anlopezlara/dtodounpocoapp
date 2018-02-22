@@ -8,7 +8,7 @@ date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
 
 $duration=60;
-$dateinsec=strtotime($now);
+$dateinsec=strtotime($now->format('Y-m-d H:i:s'));
 $newdate=$dateinsec+$duration;
 
 $conn = new mysqli($servername, $username, $password);
