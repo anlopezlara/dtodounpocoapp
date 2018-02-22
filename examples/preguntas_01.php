@@ -14,9 +14,9 @@ $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 $result = $conn->query($sql);
 print '<html>';
 	print '<body>';
-		print('<p>Prueba</p>');
+		print('<p>Prueba_1</p>');
 		if ($result->num_rows > 0) {
-			print_r($result);
+			echo '<p>'.$result.'</p>';
 			/*while($row = $result->fetch_assoc()) {
 				if ($row['id_valor'] == 'access_token')
 					$access_token = $row['valor'];
