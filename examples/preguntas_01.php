@@ -12,9 +12,9 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 
 $result = $conn->query($sql);
-
+echo '<pre>';
 if ($result->num_rows > 0) {
-	print_r('<p>'.$result.'</p>');	
+	print('<p>'.$result.'</p>');	
 	/*while($row = $result->fetch_assoc()) {
 		if ($row['id_valor'] == 'access_token')
 			$access_token = $row['valor'];
@@ -26,6 +26,7 @@ if ($result->num_rows > 0) {
 	print_r('<p>'.$access_token.'</p>');
 	print_r('<p>'.$expires_in.'</p>');
 	print_r('<p>'.$refresh_token.'</p>');*/
+echo '</pre>';
 } 
 else {
 	print_r("No hubo conexión a la base de datos");
