@@ -6,7 +6,6 @@ require '../configApp.php';
 $meli = new Meli($appId, $secretKey);
 date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
-
 $duration=60;
 $dateinsec=strtotime($now->format('Y-m-d H:i:s'));
 $newdate=$dateinsec+$duration;
@@ -22,8 +21,8 @@ $result = $conn->query($sql);
 print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
-		echo $now->format('Y-m-d H:i:s'),  "\n";
-		echo date('D M H:i:s Y',$newdate), "\n";
+		echo '<p>'.$now->format('Y-m-d H:i:s')    .'</p>';
+		echo '<p>'.$newdate->format('Y-m-d H:i:s').'</p>';;
 		if ($result->num_rows > 0) {
 			//echo '<p>'.$result.'</p>';
 			while($row = $result->fetch_assoc()) {
