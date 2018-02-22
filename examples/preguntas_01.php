@@ -4,17 +4,20 @@ require '../Meli/meli.php';
 require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
+$now  = new DateTime;
+
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
 
 $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
-
 $result = $conn->query($sql);
+
 print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
+		echo $now->format( 'd-m-Y' ), "\n";
 		if ($result->num_rows > 0) {
 			//echo '<p>'.$result.'</p>';
 			while($row = $result->fetch_assoc()) {
