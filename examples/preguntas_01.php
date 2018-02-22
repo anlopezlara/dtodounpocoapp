@@ -15,7 +15,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 	print_r('<p>'.$result.'</p>');	
-	while($row = $result->fetch_assoc()) {
+	/*while($row = $result->fetch_assoc()) {
 		if ($row['id_valor'] == 'access_token')
 			$access_token = $row['valor'];
 		if ($row['id_valor'] == 'expires_in')
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 	}
 	print_r('<p>'.$access_token.'</p>');
 	print_r('<p>'.$expires_in.'</p>');
-	print_r('<p>'.$refresh_token.'</p>');
+	print_r('<p>'.$refresh_token.'</p>');*/
 } 
 else {
 	print_r("No hubo conexión a la base de datos");
