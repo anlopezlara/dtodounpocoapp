@@ -7,11 +7,9 @@ $meli = new Meli($appId, $secretKey);
 date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
 
-$adate="Tue Jan 4 07:59:59 2011";
 $duration=60;
-$dateinsec=strtotime($adate);
+$dateinsec=strtotime($now);
 $newdate=$dateinsec+$duration;
-echo date('D M H:i:s Y',$newdate);
 
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
@@ -24,7 +22,8 @@ $result = $conn->query($sql);
 print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
-		echo $now->format('Y-m-d H:i:s'), "\n";
+		echo $now->format('Y-m-d H:i:s'),  "\n";
+		echo date('D M H:i:s Y',$newdate), "\n";
 		if ($result->num_rows > 0) {
 			//echo '<p>'.$result.'</p>';
 			while($row = $result->fetch_assoc()) {
