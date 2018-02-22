@@ -22,7 +22,7 @@ print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
 		echo '<p>'.$now->format('Y-m-d H:i:s')    .'</p>';
-		echo '<p>'.$newdate->format('Y-m-d H:i:s').'</p>';;
+		echo '<p>'.$newdate->format('Y-m-d H:i:s').'</p>';
 		if ($result->num_rows > 0) {
 			//echo '<p>'.$result.'</p>';
 			while($row = $result->fetch_assoc()) {
