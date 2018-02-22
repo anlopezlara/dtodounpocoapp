@@ -16,7 +16,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 	print_r($result);	
 	while($row = $result->fetch_assoc()) {
-		print_r("Pasa");	
+		print_r($row[id_valor]);
+		print_r($row[valor]);
 	}
 } 
 else {
