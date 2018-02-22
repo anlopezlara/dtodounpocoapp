@@ -4,6 +4,7 @@ require '../Meli/meli.php';
 require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
+date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
 
 $conn = new mysqli($servername, $username, $password);
