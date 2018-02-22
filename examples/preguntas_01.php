@@ -7,10 +7,11 @@ $meli = new Meli($appId, $secretKey);
 date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
 
-$date = new DateTime();
-echo $date->getTimestamp(). "<br>";
-$date->add(new DateInterval('PT674165S')); // adds 674165 secs
-echo $date->getTimestamp();
+$adate="Tue Jan 4 07:59:59 2011";
+$duration=60;
+$dateinsec=strtotime($adate);
+$newdate=$dateinsec+$duration;
+echo date('D M H:i:s Y',$newdate);
 
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
