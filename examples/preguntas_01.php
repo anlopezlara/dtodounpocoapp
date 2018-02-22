@@ -16,8 +16,8 @@ print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
 		if ($result->num_rows > 0) {
-			echo '<p>'.$result.'</p>';
-			/*while($row = $result->fetch_assoc()) {
+			//echo '<p>'.$result.'</p>';
+			while($row = $result->fetch_assoc()) {
 				if ($row['id_valor'] == 'access_token')
 					$access_token = $row['valor'];
 				if ($row['id_valor'] == 'expires_in')
@@ -25,9 +25,9 @@ print '<html>';
 				if ($row['id_valor'] == 'refresh_token')
 					$refresh_token = $row['valor'];
 			}
-			print_r('<p>'.$access_token.'</p>');
-			print_r('<p>'.$expires_in.'</p>');
-			print_r('<p>'.$refresh_token.'</p>');*/
+			echo '<p>'.$access_token .'</p>';
+			echo '<p>'.$expires_in   .'</p>';
+			echo '<p>'.$refresh_token.'</p>';
 
 		} 
 		else {
