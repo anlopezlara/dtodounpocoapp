@@ -8,7 +8,6 @@ date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
 $duration=60;
 $dateinsec=strtotime($now->format('Y-m-d H:i:s'));
-$newdate=$dateinsec+$duration;
 
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
@@ -40,6 +39,7 @@ print '<html>';
 			print_r("No hubo conexión a la base de datos");
 					
 		}
+		$newdate=$dateinsec+$expires_in;
 		echo $now->format('Y-m-d H:i:s'),  "\n";
 		echo date('Y-m-d H:i:s',$newdate), "\n";
 	print '</body>';
