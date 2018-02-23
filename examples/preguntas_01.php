@@ -21,8 +21,6 @@ $result = $conn->query($sql);
 print '<html>';
 	print '<body>';
 		print('<p>Prueba_1</p>');
-		echo $now->format('Y-m-d H:i:s'),  "\n";
-		echo date('Y-m-d H:i:s',$newdate), "\n";
 		if ($result->num_rows > 0) {
 			//echo '<p>'.$result.'</p>';
 			while($row = $result->fetch_assoc()) {
@@ -42,5 +40,7 @@ print '<html>';
 			print_r("No hubo conexión a la base de datos");
 					
 		}
+		echo $now->format('Y-m-d H:i:s'),  "\n";
+		echo date('Y-m-d H:i:s',$newdate), "\n";
 	print '</body>';
 print '</html>';
