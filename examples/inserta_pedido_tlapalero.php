@@ -17,13 +17,9 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 $result = $conn->query($sql);
 
-print '<html>';
-	print '<body>';
-		print '<div class="row">';
-			print '<div class="col-sm-1 col-md-1">';
-				print '<h3>Inserta Pedidos Tlapalero</h3>';
-                print '<p><a class="btn" href="../examples/inserta_pedido_tlapalero.php">Pedidos Tlapalero</a></p>';
-            print '</div>';
-		print '</div>';
-	print '</body>';
-print '</html>';
+print '<div class="row">';
+	print '<div class="col-sm-1 col-md-1">';
+		print '<h3>Inserta Pedidos Tlapalero</h3>';
+        print '<p><a class="btn" href="../examples/inserta_pedido_tlapalero.php">Pedidos Tlapalero</a></p>';
+    print '</div>';
+print '</div>';
