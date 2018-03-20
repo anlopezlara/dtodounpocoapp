@@ -40,6 +40,10 @@ print '<html>';
 					
 		}
 		$newdate=$dateinsec+$expires_in;
+		
+		$dt->add(new DateInterval("P1M")); // 2016-03-02
+$newDay = $dt->format("d");
+		
 		echo $now->format('Y-m-d H:i:s'),  "\n";
 		echo date('Y-m-d H:i:s',$newdate), "\n";
 	print '</body>';
