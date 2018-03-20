@@ -108,7 +108,7 @@ $appName = explode('.', $domain)[0];
 			<div class="row">
                 <div class="col-sm-1 col-md-1">
                     <h3>Inserta Pedidos Tlapalero</h3>
-                    <p><a class="btn" href="../examples/inserta_pedido_tlapalero.php">Preguntas</a></p>
+                    <p><a class="btn" href="../examples/inserta_pedido_tlapalero.php">Pedidos Tlapalero</a></p>
                 </div>			
 			</div>
         </main>
