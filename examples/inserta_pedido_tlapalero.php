@@ -1,7 +1,11 @@
 <?php
 session_start();
-require '../Meli/meli.php';
-require '../configApp.php';
+require 'Meli/meli.php';
+require 'configApp.php';
+$domain = $_SERVER['HTTP_HOST'];
+$appName = explode('.', $domain)[0];
+
+
 
 $meli = new Meli($appId, $secretKey);
 date_default_timezone_set('America/Mexico_City');
