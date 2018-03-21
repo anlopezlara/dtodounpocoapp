@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT pedido, date_format(fecha,"%d/%m/%Y") fecha_pedido FROM carga_pedido_tlapalero GROUP BY pedido, fecha ORDER BY pedido desc";
+$sql = 'SELECT pedido, date_format(fecha,"%d/%m/%Y") fecha_pedido FROM carga_pedido_tlapalero GROUP BY pedido, fecha ORDER BY pedido desc';
 $result = $conn->query($sql);
 
 // define variables and set to empty values
