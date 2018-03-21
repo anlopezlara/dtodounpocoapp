@@ -45,7 +45,7 @@ echo $gender;
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		#print $row["pedido"];
+		echo $row["pedido"];
 		echo 'Pasa 1';
 	}
 }else
