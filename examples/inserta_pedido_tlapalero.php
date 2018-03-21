@@ -45,10 +45,6 @@ echo $gender;
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		echo $row["pedido"];
-		echo 'Pasa 1';
+		echo $row["pedido"].' - '.$row["fecha_pedido"].'<br>';
 	}
-}else
-{
-	echo 'Pasa 2';
 }
