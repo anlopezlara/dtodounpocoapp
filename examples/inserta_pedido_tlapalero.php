@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = 'SELECT pedido, date_format(fecha,"%d/%m/%Y") fecha_pedido FROM carga_pedido_tlapalero GROUP BY pedido, fecha ORDER BY pedido desc';
+$sql = 'SELECT pedido, date_format(fecha,"%d/%m/%Y") fecha_pedido FROM db_dtodounpoco.carga_pedido_tlapalero GROUP BY pedido, fecha ORDER BY pedido desc';
 $result = $conn->query($sql);
 
 // define variables and set to empty values
@@ -45,7 +45,10 @@ echo $gender;
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-		print $row["pedido"];
+		#print $row["pedido"];
 		echo 'Pasa 1';
 	}
+}else
+{
+	echo 'Pasa 2';
 }
