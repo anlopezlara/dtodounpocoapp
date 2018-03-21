@@ -8,6 +8,7 @@ date_default_timezone_set('America/Mexico_City');
 $now  = new DateTime;
 $duration=60;
 $dateinsec=strtotime($now->format('Y-m-d H:i:s'));
+$PedidoTlapalero = "";
 
 $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
@@ -48,7 +49,7 @@ print '<html>';
 				           <td>Fecha</td>
 						   <td>Selecciona</td>
 					   </tr>";
-			if ($result->num_rows > 0) {
+				if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
 					print "<tr>";
 						echo '<td>'.$row["pedido"].'</td><td>'.$row["fecha_pedido"].'</td><td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
@@ -56,15 +57,23 @@ print '<html>';
 				}
 			}
 			print '</table>';
+			print "<br>";
 			print '<input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 		print '</form>';
-		function display($servername_,$username_,$password_)
+		function input($data) {
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			return $data;
+		}
+		function display($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
-			echo 'Prueba 1';
+			echo $PedidoTlapalero_;
 		}
 		if(isset($_POST['submit']))
 		{
-		   display($servername,$username,$password);
+		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
+		   display($servername,$username,$password,$PedidoTlapalero);
 		} 
 	print '</body>';
 print '</html>';
