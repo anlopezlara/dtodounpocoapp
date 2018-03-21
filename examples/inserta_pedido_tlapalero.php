@@ -9,7 +9,7 @@ $now  = new DateTime;
 $duration=60;
 $dateinsec=strtotime($now->format('Y-m-d H:i:s'));
 
-$conn = new mysqli($servername_, $username_, $password_);
+$conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
