@@ -43,7 +43,7 @@ print '<html>';
 	print '</head>';
 	print '<body>';
 		print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
-			print '<table class="border" width="100%">';
+			print '<table class="border" width="70">';
 				print "<tr><td>Pedido</td>
 				           <td>Fecha</td>
 						   <td>Selecciona</td>
@@ -51,7 +51,7 @@ print '<html>';
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
 					print "<tr>";
-						echo '<td>'.$row["pedido"].'</td><td>'.$row["fecha_pedido"].'</td><td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'">'.$row["pedido"].' - '.$row["fecha_pedido"].'</td>';
+						echo '<td>'.$row["pedido"].'</td><td>'.$row["fecha_pedido"].'</td><td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
 					print "</tr>";
 				}
 			}
