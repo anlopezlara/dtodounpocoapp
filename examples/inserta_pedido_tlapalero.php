@@ -33,7 +33,6 @@ function test_input($data) {
 
 Print '<h2>Pedido Tlapalero</h2>';
 echo '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">';
-Print '  Gender:';
 Print '  <input type="radio" name="gender" value="female">Female <br>';
 Print '  <input type="radio" name="gender" value="male">Male <br>';
 Print '<br><br>';
@@ -44,3 +43,8 @@ echo "<h2>Your Input:</h2>";
 echo "<br>";
 echo $gender;
 
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		$row[0]
+	}
+}
