@@ -16,9 +16,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 $result = $conn->query($sql);
-?>
 
-<?php
 // define variables and set to empty values
 $name = $email = $gender = $comment = $website = "";
 
@@ -37,8 +35,8 @@ function test_input($data) {
 <h2>PHP Form Validation Example</h2>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Gender:
-  <input type="radio" name="gender" value="female">Female
-  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="female">Female <br>
+  <input type="radio" name="gender" value="male">Male <br>
   <br><br>
   <input type="submit" name="submit" value="Submit">  
 </form>
