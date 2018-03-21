@@ -35,6 +35,14 @@ Print '<h2>Pedido Tlapalero</h2>';
 echo '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">';
 Print '  <input type="radio" name="gender" value="female">Female <br>';
 Print '  <input type="radio" name="gender" value="male">Male <br>';
+
+if ($result->num_rows > 0) {
+	while($row = $result->fetch_assoc()) {
+		#echo $row["pedido"].' - '.$row["fecha_pedido"].'<br>';
+		echo '<input type="radio" name="gender" value="'.$row["pedido"].'">'.$row["pedido"].' - '.$row["fecha_pedido"].'<br>';
+	}
+}
+
 Print '<br><br>';
 Print '  <input type="submit" name="submit" value="Submit">';
 Print '</form>';
