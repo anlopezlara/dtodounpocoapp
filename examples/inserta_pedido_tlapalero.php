@@ -58,7 +58,7 @@ print '<html>';
 			}
 			print '</table>';
 			print "<br>";
-			print '<input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
+			print '<input type="submit" value="click" name="submit_ped"> <!-- assign a name for the button -->';
 		print '</form>';
 		function input($data) {
 			$data = trim($data);
@@ -66,14 +66,14 @@ print '<html>';
 			$data = htmlspecialchars($data);
 			return $data;
 		}
-		function display($servername_,$username_,$password_,$PedidoTlapalero_)
-		{
-			echo $PedidoTlapalero_;
-		}
-		if(isset($_POST['submit']))
+		if(isset($_POST['submit_ped']))
 		{
 		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
 		   display($servername,$username,$password,$PedidoTlapalero);
 		} 
-	print '</body>';
+		function display($servername_,$username_,$password_,$PedidoTlapalero_)
+		{
+			echo $PedidoTlapalero_;
+		}
+		print '</body>';
 print '</html>';
