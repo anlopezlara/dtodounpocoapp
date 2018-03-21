@@ -30,19 +30,17 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
-?>
 
-<h2>PHP Form Validation Example</h2>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Gender:
-  <input type="radio" name="gender" value="female">Female <br>
-  <input type="radio" name="gender" value="male">Male <br>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
+Print '<h2>Pedido Tlapalero</h2>';
+echo '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">';
+Print '  Gender:';
+Print '  <input type="radio" name="gender" value="female">Female <br>';
+Print '  <input type="radio" name="gender" value="male">Male <br>';
+Print '<br><br>';
+Print '  <input type="submit" name="submit" value="Submit">';
+Print '</form>';
 
-<?php
 echo "<h2>Your Input:</h2>";
 echo "<br>";
 echo $gender;
-?>
+
