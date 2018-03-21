@@ -17,5 +17,6 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 $result = $conn->query($sql);
 
-print 'Welcome '.$_POST["name"].'<br>';
-print 'Your email address is: '.$_POST["email"]';
+echo 'Welcome '.$_POST["name"].'<br>';
+echo 'Your email address is: '.$_POST["email"]';
+
