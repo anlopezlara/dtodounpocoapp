@@ -16,9 +16,7 @@ if ($conn->connect_error) {
 
 $sql = "SELECT * FROM db_dtodounpoco.sesion_meli";
 $result = $conn->query($sql);
+?>
 
-print '<form action="inserta_pedido_tlapalero_detalle.php" method="post">';
-print 'Name: <input type="text" name="name"><br>';
-print 'E-mail: <input type="text" name="email"><br>';
-print '<input type="submit">';
-print '</form>';
+Welcome <?php echo $_POST["name"]; ?><br>
+Your email address is: <?php echo $_POST["email"]; ?>
