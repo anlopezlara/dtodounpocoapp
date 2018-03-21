@@ -32,15 +32,18 @@ print '<html>';
 	print '</head>';
 	print '<body>';
 		print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
+			
 			print '<input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
 		print '</form>';
-		function display($servername_,$username_,$password_,$meli_,$params_,$url_)
+		function display($servername_,$username_,$password_)
 		{
-			echo 'boton';
+			echo $servername_;
+			echo $username_;
+			echo $password_;
 		}
 		if(isset($_POST['submit']))
 		{
-		   display($servername,$username,$password,$meli,$params,$url);
+		   display($servername,$username,$password);
 		} 
 	print '</body>';
 print '</html>';
