@@ -45,8 +45,8 @@ print '<html>';
 		print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()) {
-					echo $row["pedido"].' - '.$row["fecha_pedido"].'<br>';
-					#echo '<input type="radio" name="gender" value="'.$row["pedido"].'">$row["pedido"].' - '.$row["fecha_pedido"]<br>';
+					#echo $row["pedido"].' - '.$row["fecha_pedido"].'<br>';
+					echo '<input type="radio" name="gender" value="'.$row["pedido"].'">'.$row["pedido"].' - '.$row["fecha_pedido"].'<br>';
 				}
 			}
 			print '<input type="submit" value="click" name="submit"> <!-- assign a name for the button -->';
