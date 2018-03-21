@@ -1,5 +1,5 @@
 <?php
 
-echo $_POST["name"];
+echo 'Nombre: '.$_POST["name"].'<br>';
 
 
