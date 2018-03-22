@@ -121,6 +121,35 @@ print '<html>';
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
 			echo 'Segundo'.$PedidoTlapalero_;
+			
+			
+			
+			$aDoor = $_POST['PedidoDetalle'];
+			if(empty($aDoor))
+			{
+			  echo("You didn't select any buildings.");
+			}
+			else
+			{
+			  $N = count($aDoor);
+			  echo("You selected $N door(s): ");
+			  for($i=0; $i < $N; $i++)
+			  {
+				echo($aDoor[$i] . " ");
+			  }
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		}
 		print '</body>';
 print '</html>';
