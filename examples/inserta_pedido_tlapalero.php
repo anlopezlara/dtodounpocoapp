@@ -103,11 +103,15 @@ print '<html>';
 				print "<br>";
 				print '<input type="submit" value="click" name="submit_det"> <!-- assign a name for the button -->';
 			print '</form>';
-			
-			
-			
-			
-			
+		}
+		if(isset($_POST['submit_det']))
+		{
+		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
+		   display_det($servername,$username,$password,$PedidoTlapalero);
+		} 
+		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
+		{
+			echo $PedidoTlapalero_;
 		}
 		print '</body>';
 print '</html>';
