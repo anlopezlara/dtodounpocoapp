@@ -104,7 +104,7 @@ print '<html>';
 							      <td>'.$row["cantidad"]   .'</td>
 								  <td>'.$row["fecha"]      .'</td>
 							      <td>'.$row["descripcion"].'</td>
-								  <td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
+								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["codigo"].'"></td>';
 						print "</tr>";
 					}
 				}
@@ -115,7 +115,7 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
+		   $PedidoTlapalero = input($_POST["PedidoDetalle"]);
 		   display_det($servername,$username,$password,$PedidoTlapalero);
 		} 
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
