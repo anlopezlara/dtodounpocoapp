@@ -111,7 +111,7 @@ print '<html>';
 		} 
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
-			echo $PedidoTlapalero_;
+			echo 'Segundo'.$PedidoTlapalero_;
 		}
 		print '</body>';
 print '</html>';
