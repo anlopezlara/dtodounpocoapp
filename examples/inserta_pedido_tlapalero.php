@@ -80,22 +80,31 @@ print '<html>';
 				die("Connection failed: " . $conn->connect_error);
 			} 
 
-			$sqlPedido = 'SELECT pedido, date_format(fecha,"%d/%m/%Y") fecha_pedido 
-						  FROM db_dtodounpoco.carga_pedido_tlapalero 
-						  GROUP BY pedido, fecha 
-						  ORDER BY pedido desc';
+			$sqlPedido = 'SELECT pedido, codigo, precio, cantidad, fecha, descripcion
+                            FROM carga_pedido_tlapalero
+                           WHERE pedido = '.PedidoTlapalero_;
 			$result = $conn->query($sqlPedido);
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 				print '<table class="border" width="70">';
 					print "<tr><td>Pedido</td>
-							   <td>Fecha</td>
+							   <td>codigo</td>
+							   <td>precio</td>
+							   <td>cantidad</td>
+							   <td>fecha</td>
+							   <td>descripcion</td>
 							   <td>Selecciona</td>
 						   </tr>";
 					if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
 						print "<tr>";
-							echo '<td>'.$row["pedido"].'</td><td>'.$row["fecha_pedido"].'</td><td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
+							echo '<td>'.$row["pedido"]     .'</td>
+							      <td>'.$row["codigo"]     .'</td>
+								  <td>'.$row["precio"]     .'</td>
+							      <td>'.$row["cantidad"]   .'</td>
+								  <td>'.$row["fecha"]      .'</td>
+							      <td>'.$row["descripcion"].'</td>
+								  <td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
 						print "</tr>";
 					}
 				}
