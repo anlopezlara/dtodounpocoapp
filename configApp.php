@@ -20,6 +20,7 @@ $nickname = getenv('nickname');
 /* My SQL database */
 $servername = getenv('servername');
 $username = getenv('username');
+$username_desa = getenv('username_desa');
 $password = getenv('password');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////

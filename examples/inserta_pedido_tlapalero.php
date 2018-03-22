@@ -10,7 +10,9 @@ $duration=60;
 $dateinsec=strtotime($now->format('Y-m-d H:i:s'));
 $PedidoTlapalero = "";
 
-$conn = new mysqli($servername, $username, $password);
+$db_username = $username_desa
+
+$conn = new mysqli($servername, $db_username, $password);
 if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 } 
@@ -69,7 +71,7 @@ print '<html>';
 		if(isset($_POST['submit_ped']))
 		{
 		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
-		   display($servername,$username,$password,$PedidoTlapalero);
+		   display($servername,$db_username,$password,$PedidoTlapalero);
 		} 
 		function display($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
@@ -114,14 +116,14 @@ print '<html>';
 		if(isset($_POST['submit_det']))
 		{
 		   $PedidoTlapalero = input($_POST["PedidoDetalle"]);
-		   display_det($servername,$username,$password,$PedidoTlapalero);
+		   display_det($servername,$db_username,$password,$PedidoTlapalero);
 		} 
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
 			$aDetalle = $_POST['PedidoDetalle'];
 			if(empty($aDetalle))
 			{
-			  echo("No seleccionó ningún detalle");
+			  echo("No seleccionó ningún Producto");
 			}
 			else
 			{
