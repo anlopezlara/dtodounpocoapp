@@ -76,7 +76,7 @@ print '<html>';
 			echo $PedidoTlapalero_;
 			
 			
-			#print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
+			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 			#	print '<table class="border" width="70">';
 			#		print "<tr><td>Pedido</td>
 			#				   <td>Fecha</td>
@@ -91,8 +91,8 @@ print '<html>';
 			#	}
 			#	print '</table>';
 			#	print "<br>";
-			#	print '<input type="submit" value="click" name="submit_ped"> <!-- assign a name for the button -->';
-			#print '</form>';
+				print '<input type="submit" value="click" name="submit_det"> <!-- assign a name for the button -->';
+			print '</form>';
 			
 			
 			
