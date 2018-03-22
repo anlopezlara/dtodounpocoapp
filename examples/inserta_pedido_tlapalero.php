@@ -75,22 +75,32 @@ print '<html>';
 		{
 			echo $PedidoTlapalero_;
 			
+			$conn = new mysqli($servername_, $username_, $password_);
+			if ($conn->connect_error) {
+				die("Connection failed: " . $conn->connect_error);
+			} 
+
+			$sqlPedido = 'SELECT pedido, date_format(fecha,"%d/%m/%Y") fecha_pedido 
+						  FROM db_dtodounpoco.carga_pedido_tlapalero 
+						  GROUP BY pedido, fecha 
+						  ORDER BY pedido desc';
+			$result = $conn->query($sqlPedido);
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
-			#	print '<table class="border" width="70">';
-			#		print "<tr><td>Pedido</td>
-			#				   <td>Fecha</td>
-			#				   <td>Selecciona</td>
-			#			   </tr>";
-			#		if ($result->num_rows > 0) {
-			#		while($row = $result->fetch_assoc()) {
-			#			print "<tr>";
-			#				echo '<td>'.$row["pedido"].'</td><td>'.$row["fecha_pedido"].'</td><td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
-			#			print "</tr>";
-			#		}
-			#	}
-			#	print '</table>';
-			#	print "<br>";
+				print '<table class="border" width="70">';
+					print "<tr><td>Pedido</td>
+							   <td>Fecha</td>
+							   <td>Selecciona</td>
+						   </tr>";
+					if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()) {
+						print "<tr>";
+							echo '<td>'.$row["pedido"].'</td><td>'.$row["fecha_pedido"].'</td><td><input type="radio" name="PedidoTlapalero" value="'.$row["pedido"].'"></td>';
+						print "</tr>";
+					}
+				}
+				print '</table>';
+				print "<br>";
 				print '<input type="submit" value="click" name="submit_det"> <!-- assign a name for the button -->';
 			print '</form>';
 			
