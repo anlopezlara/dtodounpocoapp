@@ -80,10 +80,10 @@ print '<html>';
 				die("Connection failed: " . $conn->connect_error);
 			} 
 
-			$sqlPedido = 'SELECT pedido, codigo, precio, cantidad, fecha, descripcion
+			$sqlDetalle = 'SELECT pedido, codigo, precio, cantidad, fecha, descripcion
                             FROM carga_pedido_tlapalero
                            WHERE pedido = '.PedidoTlapalero_;
-			$result = $conn->query($sqlPedido);
+			$result = $conn->query($sqlDetalle);
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 				print '<table class="border" width="70">';
