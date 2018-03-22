@@ -73,8 +73,6 @@ print '<html>';
 		} 
 		function display($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
-			echo $PedidoTlapalero_;
-			
 			$conn = new mysqli($servername_, $username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
@@ -120,36 +118,19 @@ print '<html>';
 		} 
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
-			echo 'Segundo'.$PedidoTlapalero_;
-			
-			
-			
-			$aDoor = $_POST['PedidoDetalle'];
-			if(empty($aDoor))
+			$aDetalle = $_POST['PedidoDetalle'];
+			if(empty($aDetalle))
 			{
-			  echo("You didn't select any buildings.");
+			  echo("No seleccionó ningún detalle");
 			}
 			else
 			{
-			  $N = count($aDoor);
-			  echo("You selected $N door(s): ");
+			  $N = count($aDetalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($aDoor[$i] . " ");
+				echo($aDetalle[$i]."<br> ");
 			  }
 			}
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 		}
 		print '</body>';
 print '</html>';
