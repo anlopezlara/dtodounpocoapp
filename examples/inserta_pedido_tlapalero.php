@@ -81,7 +81,7 @@ print '<html>';
 			} 
 
 			$sqlDetalle = 'SELECT pedido, codigo, precio, cantidad, fecha, descripcion
-                            FROM carga_pedido_tlapalero
+                            FROM db_dtodounpoco.carga_pedido_tlapalero
                            WHERE pedido = 100078402';
 			$result = $conn->query($sqlDetalle);
 			
