@@ -82,7 +82,7 @@ print '<html>';
 
 			$sqlDetalle = 'SELECT pedido, codigo, precio, cantidad, fecha, descripcion
                             FROM db_dtodounpoco.carga_pedido_tlapalero
-                           WHERE pedido = 100078402';
+                           WHERE pedido = '.PedidoTlapalero_;
 			$result = $conn->query($sqlDetalle);
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
