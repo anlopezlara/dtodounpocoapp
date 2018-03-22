@@ -10,6 +10,6 @@ $duration=60;
 $dateinsec=strtotime($now->format('Y-m-d H:i:s'));
 $PedidoTlapalero = "";
 
-$db_username = $username_desa
+$db_username = $username_desa;
 
 echo db_username;
