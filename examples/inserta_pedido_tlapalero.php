@@ -112,10 +112,10 @@ print '<html>';
 						   </tr>";
 					if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
-						if ($row["Precio_tlapalero"] == 1076.72)
+						if ($row["Precio_tlapalero"] == '1076.72')
 							$Marca = 'style="background-color:Tomato;"';
 						else
-							$Marca = 'style="background-color:Red;"';
+							$Marca = '';
 						print "<tr>";
 							echo '<td>'.$row["Pedido"          ].'</td>
 							      <td>'.$row["Codigo"          ].'</td>
