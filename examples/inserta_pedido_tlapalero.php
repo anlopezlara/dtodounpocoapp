@@ -106,7 +106,7 @@ print '<html>';
 							   <td>Pecio_producto</td>
 							   <td>Cantidad</td>
 							   <td>Fecha</td>
-							   <td>Fescripcion</td>
+							   <td>Descripcion</td>
 							   <td>Selecciona</td>
 						   </tr>";
 					if ($result->num_rows > 0) {
@@ -120,6 +120,8 @@ print '<html>';
 							      <td>'.$row["Cantidad"        ].'</td>
 								  <td>'.$row["Fecha"           ].'</td>
 							      <td>'.$row["Descripcion"     ].'</td>
+								  <td><input type="radio" name="Pago" value="Bancomer" checked>Bancomer</td>
+								  <td><input type="radio" name="Pago" value="ActivoCirculante" checked>Activo Circulante</td>
 								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["Codigo"].'" checked></td>';
 						print "</tr>";
 					}
