@@ -79,7 +79,7 @@ print '<html>';
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 			} 
-
+			echo $PedidoTlapalero_
 			$sqlDetalle = 'SELECT c.pedido 
 					  FROM db_dtodounpoco.carga_pedido_tlapalero         c
 					 WHERE c.pedido = '.$PedidoTlapalero_;
