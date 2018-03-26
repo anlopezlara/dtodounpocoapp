@@ -101,12 +101,13 @@ print '<html>';
 				print '<table class="border" width="70">';
 					print "<tr><td>Pedido</td>
 							   <td>Codigo</td>
-							   <td>Precio_tlapalero</td>
-							   <td>Pecio_Proveedor</td>
-							   <td>Pecio_producto</td>
+							   <td>Precio tlapalero</td>
+							   <td>Pecio Proveedor</td>
+							   <td>Pecio producto</td>
 							   <td>Cantidad</td>
 							   <td>Fecha</td>
 							   <td>Descripcion</td>
+							   <td>Tipo Pago</td>
 							   <td>Selecciona</td>
 						   </tr>";
 					if ($result->num_rows > 0) {
@@ -121,7 +122,7 @@ print '<html>';
 								  <td>'.$row["Fecha"           ].'</td>
 							      <td>'.$row["Descripcion"     ].'</td>
 								  <td><input type="radio" name="Pago'.$row["Codigo"].'" value="Bancomer" checked>Bancomer</td>
-								  <td><input type="radio" name="Pago'.$row["Codigo"].'" value="ActivoCirculante" >Activo Circulante</td>
+								      <input type="radio" name="Pago'.$row["Codigo"].'" value="ActivoCirculante" >Activo Circulante
 								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["Codigo"].'" checked></td>';
 						print "</tr>";
 					}
