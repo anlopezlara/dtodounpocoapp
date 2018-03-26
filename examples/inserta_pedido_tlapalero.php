@@ -120,8 +120,8 @@ print '<html>';
 							      <td>'.$row["Cantidad"        ].'</td>
 								  <td>'.$row["Fecha"           ].'</td>
 							      <td>'.$row["Descripcion"     ].'</td>
-								  <td><input type="radio" name="Pago[]" value="Bancomer" checked>Bancomer</td>
-								  <td><input type="radio" name="Pago[]" value="ActivoCirculante" >Activo Circulante</td>
+								  <td><input type="radio" name="Pago'.$row["Codigo"].'" value="Bancomer" checked>Bancomer</td>
+								  <td><input type="radio" name="Pago'.$row["Codigo"].'" value="ActivoCirculante" >Activo Circulante</td>
 								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["Codigo"].'" checked></td>';
 						print "</tr>";
 					}
