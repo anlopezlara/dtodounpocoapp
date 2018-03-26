@@ -80,16 +80,28 @@ print '<html>';
 				die("Connection failed: " . $conn->connect_error);
 			} 
 
-			$sqlDetalle = 'SELECT pedido, codigo, precio, cantidad, fecha, descripcion
-                            FROM db_dtodounpoco.carga_pedido_tlapalero
-                           WHERE pedido = '.$PedidoTlapalero_;
-			$result = $conn->query($sqlDetalle);
+			$sqlDetalle = 'SELECT c.pedido Pedido                 ,
+						   c.codigo Codigo                        ,
+						   FORMAT(c.precio    ,2) Precio_tlapalero,
+						   FORMAT(a.price     ,2) Pecio_Proveedor ,
+						   FORMAT(b.cost_price,2) Pecio_producto  ,
+						   cantidad                               ,
+						   fecha                                  ,
+						   descripcion
+					  FROM i3120427_doli3.doli_product_fournisseur_price a,
+						   i3120427_doli3.doli_product                   b,
+						   db_dtodounpoco.carga_pedido_tlapalero         c
+					 WHERE a.fk_product = b.rowid
+					   AND a.ref_fourn = c.codigo
+					   AND c.pedido = '.$PedidoTlapalero_;
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 				print '<table class="border" width="70">';
 					print "<tr><td>Pedido</td>
 							   <td>codigo</td>
-							   <td>precio</td>
+							   <td>Precio_tlapalero</td>
+							   <td>Pecio_Proveedor</td>
+							   <td>Pecio_producto</td>
 							   <td>cantidad</td>
 							   <td>fecha</td>
 							   <td>descripcion</td>
@@ -100,7 +112,9 @@ print '<html>';
 						print "<tr>";
 							echo '<td>'.$row["pedido"]     .'</td>
 							      <td>'.$row["codigo"]     .'</td>
-								  <td>'.$row["precio"]     .'</td>
+								  <td>'.$row["Precio_tlapalero"]     .'</td>
+								  <td>'.$row["Pecio_Proveedor"]     .'</td>
+								  <td>'.$row["Pecio_producto"]     .'</td>
 							      <td>'.$row["cantidad"]   .'</td>
 								  <td>'.$row["fecha"]      .'</td>
 							      <td>'.$row["descripcion"].'</td>
