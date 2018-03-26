@@ -120,8 +120,8 @@ print '<html>';
 							echo '<td>'.$row["Pedido"          ].'</td>
 							      <td>'.$row["Codigo"          ].'</td>
 								  <td '.$Marca.'>'.$row["Precio_tlapalero"].'</td>
-								  <td>'.$row["Pecio_Proveedor" ].'</td>
-								  <td>'.$row["Pecio_producto"  ].'</td>
+								  <td '.$Marca.'>'.$row["Pecio_Proveedor" ].'</td>
+								  <td '.$Marca.'>'.$row["Pecio_producto"  ].'</td>
 							      <td>'.$row["Cantidad"        ].'</td>
 								  <td>'.$row["Fecha"           ].'</td>
 							      <td>'.$row["Descripcion"     ].'</td>
