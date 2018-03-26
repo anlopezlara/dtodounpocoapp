@@ -115,7 +115,7 @@ print '<html>';
 						if ($row["Precio_tlapalero"] == 1076.72)
 							$Marca = 'style="background-color:Tomato;"';
 						else
-							$Marca = '';
+							$Marca = 'style="background-color:Red;"';
 						print "<tr>";
 							echo '<td>'.$row["Pedido"          ].'</td>
 							      <td>'.$row["Codigo"          ].'</td>
