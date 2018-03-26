@@ -92,7 +92,7 @@ print '<html>';
 					while($row = $result->fetch_assoc()) {
 						print "<tr>";
 							echo '<td>'.$row["pedido"]     .'</td>
-								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["codigo"].'" checked></td>';
+								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["pedido"].'" checked></td>';
 						print "</tr>";
 					}
 				}
