@@ -112,7 +112,7 @@ print '<html>';
 						   </tr>";
 					if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
-						if ($row["Precio_tlapalero"] != $row["Pecio_Proveedor"])
+						if ($row["Precio_tlapalero"] == $row["Pecio_Proveedor"])
 							$Marca = '';
 						else
 							$Marca = 'style="background-color:Tomato;"';
