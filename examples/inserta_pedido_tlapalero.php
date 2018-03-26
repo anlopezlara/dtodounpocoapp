@@ -99,7 +99,7 @@ print '<html>';
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 				print '<table class="border" width="70">';
-					print "<tr>td>Pedido</td>
+					print "<tr><td>Pedido</td>
 							   <td>Codigo</td>
 							   <td>Precio_tlapalero</td>
 							   <td>Pecio_Proveedor</td>
@@ -112,14 +112,14 @@ print '<html>';
 					if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
 						print "<tr>";
-							echo '<td>'.$row["Pedido"]     .'</td>
-							      <td>'.$row["Codigo"]     .'</td>
-								  <td>'.$row["Precio_tlapalero"]     .'</td>
-								  <td>'.$row["Pecio_Proveedor"]     .'</td>
-								  <td>'.$row["Pecio_producto"]     .'</td>
-							      <td>'.$row["cantidad"]   .'</td>
-								  <td>'.$row["fecha"]      .'</td>
-							      <td>'.$row["descripcion"].'</td>
+							echo '<td>'.$row["Pedido"          ].'</td>
+							      <td>'.$row["Codigo"          ].'</td>
+								  <td>'.$row["Precio_tlapalero"].'</td>
+								  <td>'.$row["Pecio_Proveedor" ].'</td>
+								  <td>'.$row["Pecio_producto"  ].'</td>
+							      <td>'.$row["cantidad"        ].'</td>
+								  <td>'.$row["fecha"           ].'</td>
+							      <td>'.$row["descripcion"     ].'</td>
 								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["codigo"].'" checked></td>';
 						print "</tr>";
 					}
