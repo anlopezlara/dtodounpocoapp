@@ -115,7 +115,7 @@ print '<html>';
 						print "<tr>";
 							echo '<td>'.$row["Pedido"          ].'</td>
 							      <td>'.$row["Codigo"          ].'</td>
-								  <td>'.$row["Precio_tlapalero"].'</td>
+								  <td style="background-color:Tomato;">'.$row["Precio_tlapalero"].'</td>
 								  <td>'.$row["Pecio_Proveedor" ].'</td>
 								  <td>'.$row["Pecio_producto"  ].'</td>
 							      <td>'.$row["Cantidad"        ].'</td>
