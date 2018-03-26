@@ -106,25 +106,25 @@ print '<html>';
 							   <td>Pecio producto</td>
 							   <td>Cantidad</td>
 							   <td>Fecha</td>
-							   <td>Descripcion</td>
+							   <td>Descripción</td>
 							   <td>Tipo Pago</td>
 							   <td>Selecciona</td>
 						   </tr>";
 					if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
-						if ($row["Precio_tlapalero"] == $row["Pecio_Proveedor"])
-							$Marca = 'style="background-color:Tomato;"';
-						else
+						if ($row["Precio_tlapalero"] != $row["Pecio_Proveedor"])
 							$Marca = '';
+						else
+							$Marca = 'style="background-color:Tomato;"';
 						print "<tr>";
-							echo '<td>'.$row["Pedido"          ].'</td>
-							      <td>'.$row["Codigo"          ].'</td>
+							echo '<td>'           .$row["Pedido"          ].'</td>
+							      <td>'           .$row["Codigo"          ].'</td>
 								  <td '.$Marca.'>'.$row["Precio_tlapalero"].'</td>
 								  <td '.$Marca.'>'.$row["Pecio_Proveedor" ].'</td>
 								  <td '.$Marca.'>'.$row["Pecio_producto"  ].'</td>
-							      <td>'.$row["Cantidad"        ].'</td>
-								  <td>'.$row["Fecha"           ].'</td>
-							      <td>'.$row["Descripcion"     ].'</td>
+							      <td>'           .$row["Cantidad"        ].'</td>
+								  <td>'           .$row["Fecha"           ].'</td>
+							      <td>'           .$row["Descripcion"     ].'</td>
 								  <td><input type="radio" name="Pago'.$row["Codigo"].'" value="Bancomer" checked>Bancomer
 								      <input type="radio" name="Pago'.$row["Codigo"].'" value="ActivoCirculante" >Activo Circulante
 								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["Codigo"].'" checked></td>';
