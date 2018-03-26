@@ -80,14 +80,14 @@ print '<html>';
 				die("Connection failed: " . $conn->connect_error);
 			} 
 
-			$sqlDetalle = 'SELECT c.pedido Pedido                 ,
-						   c.codigo Codigo                        ,
+			$sqlDetalle = 'SELECT c.pedido        Pedido          ,
+						   c.codigo               Codigo          ,
 						   FORMAT(c.precio    ,2) Precio_tlapalero,
 						   FORMAT(a.price     ,2) Pecio_Proveedor ,
 						   FORMAT(b.cost_price,2) Pecio_producto  ,
-						   cantidad                               ,
-						   fecha                                  ,
-						   descripcion
+						   cantidad               Cantidad        ,
+						   fecha                  Fecha           ,
+						   descripcion            Descripcion
 					  FROM i3120427_doli3.doli_product_fournisseur_price a,
 						   i3120427_doli3.doli_product                   b,
 						   db_dtodounpoco.carga_pedido_tlapalero         c
@@ -104,9 +104,9 @@ print '<html>';
 							   <td>Precio_tlapalero</td>
 							   <td>Pecio_Proveedor</td>
 							   <td>Pecio_producto</td>
-							   <td>cantidad</td>
-							   <td>fecha</td>
-							   <td>descripcion</td>
+							   <td>Cantidad</td>
+							   <td>Fecha</td>
+							   <td>Fescripcion</td>
 							   <td>Selecciona</td>
 						   </tr>";
 					if ($result->num_rows > 0) {
@@ -117,9 +117,9 @@ print '<html>';
 								  <td>'.$row["Precio_tlapalero"].'</td>
 								  <td>'.$row["Pecio_Proveedor" ].'</td>
 								  <td>'.$row["Pecio_producto"  ].'</td>
-							      <td>'.$row["cantidad"        ].'</td>
-								  <td>'.$row["fecha"           ].'</td>
-							      <td>'.$row["descripcion"     ].'</td>
+							      <td>'.$row["Cantidad"        ].'</td>
+								  <td>'.$row["Fecha"           ].'</td>
+							      <td>'.$row["Descripcion"     ].'</td>
 								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["Codigo"].'" checked></td>';
 						print "</tr>";
 					}
