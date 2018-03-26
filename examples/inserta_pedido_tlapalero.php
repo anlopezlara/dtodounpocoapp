@@ -120,7 +120,7 @@ print '<html>';
 							      <td>'.$row["cantidad"        ].'</td>
 								  <td>'.$row["fecha"           ].'</td>
 							      <td>'.$row["descripcion"     ].'</td>
-								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["codigo"].'" checked></td>';
+								  <td><input type="checkbox" name="PedidoDetalle[]" value="'.$row["Codigo"].'" checked></td>';
 						print "</tr>";
 					}
 				}
