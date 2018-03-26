@@ -81,12 +81,8 @@ print '<html>';
 			} 
 
 			$sqlDetalle = 'SELECT c.pedido 
-					  FROM i3120427_doli3.doli_product_fournisseur_price a,
-						   i3120427_doli3.doli_product                   b,
-						   db_dtodounpoco.carga_pedido_tlapalero         c
-					 WHERE a.fk_product = b.rowid
-					   AND a.ref_fourn = c.codigo
-					   AND c.pedido = '.$PedidoTlapalero_;
+					  FROM db_dtodounpoco.carga_pedido_tlapalero         c
+					 WHERE c.pedido = '.$PedidoTlapalero_;
 			
 			print '<form method="post" action="'.htmlspecialchars($_SERVER["PHP_SELF"]).'">  ';
 				print '<table class="border" width="70">';
