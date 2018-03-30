@@ -138,6 +138,7 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
+			echo($servername.' - '.$db_username.' - '.$password);
 		    display_det($servername,$db_username,$password);
 		} 
 		function display_det($servername_,$username_,$password_)
