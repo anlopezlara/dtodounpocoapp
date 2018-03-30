@@ -152,7 +152,7 @@ print '<html>';
 			  $N = count($Detalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '."Pago".$Detalle[$i]."<br> ");
+				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '.$_POST["Pago".$Detalle[$i]]."<br> ");
 			  }
 			}
 		}
