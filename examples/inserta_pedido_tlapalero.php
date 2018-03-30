@@ -140,7 +140,7 @@ print '<html>';
 		{
 		   #$PedidoDetTlapalero = input($_POST["PedidoDetalle"]);
 		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
-		   echo($PedidoTlapalero);
+		   print($PedidoTlapalero);
 		   display_det($servername,$db_username,$password,PedidoTlapalero,$PedidoDetTlapalero);
 		} 
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_,$PedidoDetTlapalero_)
