@@ -140,7 +140,7 @@ print '<html>';
 		{
 		    display_det($servername,$db_username,$password);
 		} 
-		function display_det($servername_,$username_,$password_)
+		function display_det($servername_,$db_username_,$password_)
 		{
 			echo($servername_.' - '.$db_username_.' - '.$password_);
 			$conn = new mysqli($servername_, $db_username_, $password_);
