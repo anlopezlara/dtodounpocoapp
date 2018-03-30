@@ -71,6 +71,7 @@ print '<html>';
 		if(isset($_POST['submit_ped']))
 		{
 		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
+		   $_SESSION["newsession"]=$PedidoTlapalero;
 		   display($servername,$db_username,$password,$PedidoTlapalero);
 		} 
 		function display($servername_,$username_,$password_,$PedidoTlapalero_)
@@ -138,7 +139,7 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		   echo($PedidoTlapalero.'- 2 -');
+		   echo($_SESSION["newsession"].'- 2 -');
 		   display_det($servername,$db_username,$password);
 		} 
 		function display_det($servername_,$username_,$password_)
