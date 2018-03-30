@@ -138,22 +138,22 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		   $PedidoTlapalero = input($_POST["PedidoDetalle"]);
-		   display_det($servername,$db_username,$password,$PedidoTlapalero);
+		   $PedidoDetTlapalero = input($_POST["PedidoDetalle"]);
+		   display_det($servername,$db_username,$password,$PedidoDetTlapalero);
 		} 
 		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
-			$aDetalle = $_POST['PedidoDetalle'];
-			if(empty($aDetalle))
+			$Detalle = $_POST['PedidoDetalle'];
+			if(empty($Detalle))
 			{
 			  echo("No seleccionó ningún Producto");
 			}
 			else
 			{
-			  $N = count($aDetalle);
+			  $N = count($Detalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($aDetalle[$i]."<br> ");
+				echo($Detalle[$i]."<br> ");
 			  }
 			}
 		}
