@@ -153,7 +153,7 @@ print '<html>';
 			  $N = count($Detalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($Detalle[$i]."<br> ");
+				echo($PedidoTlapalero.' - '.$Detalle[$i]."<br> ");
 			  }
 			}
 		}
