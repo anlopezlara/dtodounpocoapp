@@ -138,7 +138,7 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		   echo(input($_POST["PedidoTlapalero"]).'- 2 -');
+		   echo($PedidoTlapalero.'- 2 -');
 		   display_det($servername,$db_username,$password);
 		} 
 		function display_det($servername_,$username_,$password_)
