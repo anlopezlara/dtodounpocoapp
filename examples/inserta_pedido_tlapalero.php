@@ -138,7 +138,6 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		    #echo($_SESSION["SPedidoTlapalero"].'- 2 -');
 		    display_det($servername,$db_username,$password);
 		} 
 		function display_det($servername_,$username_,$password_)
@@ -153,7 +152,7 @@ print '<html>';
 			  $N = count($Detalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i]."<br> ");
+				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '."Pago".$Detalle[$i]."<br> ");
 			  }
 			}
 		}
