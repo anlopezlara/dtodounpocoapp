@@ -142,6 +142,11 @@ print '<html>';
 		} 
 		function display_det($servername_,$username_,$password_)
 		{
+			$conn = new mysqli($servername, $db_username, $password);
+			if ($conn->connect_error) {
+				die("Connection failed: " . $conn->connect_error);
+			} 
+
 			$Detalle = $_POST['PedidoDetalle'];
 			if(empty($Detalle))
 			{
@@ -153,6 +158,12 @@ print '<html>';
 			  for($i=0; $i < $N; $i++)
 			  {
 				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '.$_POST["Pago".$Detalle[$i]]."<br> ");
+				
+				$conn->multi_query( "CALL p_actualiza_producto_desa('','','',@id);SELECT @id as id" );
+				$conn->next_result();            // flush the null RS from the call
+				$rs=$conn->store_result();       // get the RS containing the id
+				echo $rs->fetch_object()->id, "\n";
+				$rs->free();
 			  }
 			}
 		}
