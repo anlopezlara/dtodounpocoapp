@@ -138,12 +138,10 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		   #$PedidoDetTlapalero = input($_POST["PedidoDetalle"]);
-		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
 		   print($PedidoTlapalero);
-		   display_det($servername,$db_username,$password,PedidoTlapalero,$PedidoDetTlapalero);
+		   display_det($servername,$db_username,$password);
 		} 
-		function display_det($servername_,$username_,$password_,$PedidoTlapalero_,$PedidoDetTlapalero_)
+		function display_det($servername_,$username_,$password_)
 		{
 			$Detalle = $_POST['PedidoDetalle'];
 			if(empty($Detalle))
