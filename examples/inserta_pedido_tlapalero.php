@@ -139,9 +139,9 @@ print '<html>';
 		if(isset($_POST['submit_det']))
 		{
 		   $PedidoDetTlapalero = input($_POST["PedidoDetalle"]);
-		   display_det($servername,$db_username,$password,$PedidoDetTlapalero);
+		   display_det($servername,$db_username,$password,PedidoTlapalero,$PedidoDetTlapalero);
 		} 
-		function display_det($servername_,$username_,$password_,$PedidoTlapalero_)
+		function display_det($servername_,$username_,$password_,$PedidoTlapalero_,$PedidoDetTlapalero_)
 		{
 			$Detalle = $_POST['PedidoDetalle'];
 			if(empty($Detalle))
@@ -153,7 +153,7 @@ print '<html>';
 			  $N = count($Detalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($PedidoTlapalero.' - '.$Detalle[$i]."<br> ");
+				echo($PedidoTlapalero_.' - '.$Detalle[$i]."<br> ");
 			  }
 			}
 		}
