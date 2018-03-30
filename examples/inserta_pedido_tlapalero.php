@@ -70,9 +70,8 @@ print '<html>';
 		}
 		if(isset($_POST['submit_ped']))
 		{
-		   $PedidoTlapalero = input($_POST["PedidoTlapalero"]);
-		   $_SESSION["newsession"]=$PedidoTlapalero;
-		   display($servername,$db_username,$password,$PedidoTlapalero);
+		   $_SESSION["SPedidoTlapalero"] = input($_POST["PedidoTlapalero"]);
+		   display($servername,$db_username,$password,$_SESSION["SPedidoTlapalero"]);
 		} 
 		function display($servername_,$username_,$password_,$PedidoTlapalero_)
 		{
@@ -139,8 +138,8 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		   echo($_SESSION["newsession"].'- 2 -');
-		   display_det($servername,$db_username,$password);
+		    #echo($_SESSION["SPedidoTlapalero"].'- 2 -');
+		    display_det($servername,$db_username,$password);
 		} 
 		function display_det($servername_,$username_,$password_)
 		{
@@ -154,7 +153,7 @@ print '<html>';
 			  $N = count($Detalle);
 			  for($i=0; $i < $N; $i++)
 			  {
-				echo($Detalle[$i]."<br> ");
+				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i]."<br> ");
 			  }
 			}
 		}
