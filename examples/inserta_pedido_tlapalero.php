@@ -162,7 +162,7 @@ print '<html>';
 				
 				#------------------------------------------------------------------------------------------------
 				#------------------------------------------------------------------------------------------------
-				$mysqli = new mysqli($servername, $db_username, $password_, "db_dtodounpoco");
+				$mysqli = new mysqli("www.d-todounpoco.com.mx", "anlopez_desa", "Azteca02", "db_dtodounpoco");
 				if ($mysqli->connect_errno) {
 					echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 				}
