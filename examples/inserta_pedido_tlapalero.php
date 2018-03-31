@@ -169,8 +169,7 @@ print '<html>';
 
 				if (!$mysqli->query("SET @msg = ''") || !$mysqli->query("CALL p_actualiza_producto_desa(".$_SESSION["SPedidoTlapalero"].",".
 				                                                                                          $Detalle[$i]                 .",".
-																										  $_POST["Pago"                .",".
-																										  $Detalle[$i]]                .
+																										  $_POST["Pago".$Detalle[$i]]  .
 																										  ",@msg)")) {
 					echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
 				}
