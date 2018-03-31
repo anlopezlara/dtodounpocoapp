@@ -167,7 +167,7 @@ print '<html>';
 					echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 				}
 
-				if (!$mysqli->query("SET @msg = ''") || !$mysqli->query("CALL p_actualiza_producto_desa(".$_SESSION["SPedidoTlapalero"].",".$Detalle[$i].",'',@msg)")) {
+				if (!$mysqli->query("SET @msg = ''") || !$mysqli->query("CALL p_actualiza_producto_desa(".$_SESSION["SPedidoTlapalero"].",'".$Detalle[$i]."','',@msg)")) {
 					echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
 				}
 
