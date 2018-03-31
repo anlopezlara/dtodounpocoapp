@@ -160,11 +160,34 @@ print '<html>';
 			  {
 				echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '.$_POST["Pago".$Detalle[$i]]."<br> ");
 				
-				$conn->multi_query( "CALL p_actualiza_producto_desa('','','',@id);SELECT @id as id" );
-				$conn->next_result();            // flush the null RS from the call
-				$rs=$conn->store_result();       // get the RS containing the id
-				echo $rs->fetch_object()->id, "\n";
-				$rs->free();
+				#------------------------------------------------------------------------------------------------
+				#------------------------------------------------------------------------------------------------
+				$mysqli = new mysqli("example.com", "user", "password", "database");
+				if ($mysqli->connect_errno) {
+					echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+				}
+
+				if (!$mysqli->query("DROP PROCEDURE IF EXISTS p") ||
+					!$mysqli->query('CREATE PROCEDURE p(OUT msg VARCHAR(50)) BEGIN SELECT "Hi!" INTO msg; END;')) {
+					echo "Stored procedure creation failed: (" . $mysqli->errno . ") " . $mysqli->error;
+				}
+
+
+				if (!$mysqli->query("SET @msg = ''") || !$mysqli->query("CALL p(@msg)")) {
+					echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+				}
+
+				if (!($res = $mysqli->query("SELECT @msg as _p_out"))) {
+					echo "Fetch failed: (" . $mysqli->errno . ") " . $mysqli->error;
+				}
+
+				$row = $res->fetch_assoc();
+				echo $row['_p_out'];				
+				
+				#------------------------------------------------------------------------------------------------
+				#------------------------------------------------------------------------------------------------
+				
+				
 			  }
 			}
 		}
