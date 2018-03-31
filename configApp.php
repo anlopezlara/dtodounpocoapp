@@ -22,6 +22,7 @@ $servername = getenv('servername');
 $username = getenv('username');
 $username_desa = getenv('username_desa');
 $password = getenv('password');
+$db_dtodounpoco = getenv('db_dtodounpoco');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //If you don't use Heroku use the next config
