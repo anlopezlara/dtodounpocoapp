@@ -138,9 +138,9 @@ print '<html>';
 		}
 		if(isset($_POST['submit_det']))
 		{
-		    display_det($servername,$db_username,$password);
+		    display_det($servername,$db_username,$password,$db_dtodounpoco);
 		} 
-		function display_det($servername_,$db_username_,$password_)
+		function display_det($servername_,$db_username_,$password_, $db_dtodounpoco_)
 		{
 			echo($servername_.' - '.$db_username_.' - '.$password_);
 			$conn = new mysqli($servername_, $db_username_, $password_);
@@ -162,8 +162,7 @@ print '<html>';
 				
 				#------------------------------------------------------------------------------------------------
 				#------------------------------------------------------------------------------------------------
-				#$mysqli = new mysqli($servername_,$db_username_,$password_, "db_dtodounpoco");
-				$mysqli = new mysqli($servername_,$db_username_,$password_);
+				$mysqli = new mysqli($servername_,$db_username_,$password_, $db_dtodounpoco_);
 				if ($mysqli->connect_errno) {
 					echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 				}
