@@ -160,7 +160,7 @@ print '<html>';
 			}
 			else
 			{
-			    #print '<div class="row">';
+			    print '<div class="row">';
 					#print '<div class="col-md-6">';
 						#print '<pre class="pre-item">';
 							$N = count($Detalle);
@@ -182,7 +182,7 @@ print '<html>';
 							}
 						#print '</pre>';
 					#print '</div>';
-				#print '</div>';
+				print '</div>';
 			}
 		}
 		print '</body>';
