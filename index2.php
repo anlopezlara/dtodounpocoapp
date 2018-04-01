@@ -48,26 +48,9 @@ $appName = explode('.', $domain)[0];
                 <div class="col-md-6">
 
                     <pre class="pre-item">
-"title" => "Item De Teste - Por Favor, Não Ofertar! --kc:off",
-        "category_id" => "MLB1227",
-        "price" => 10,
-        "currency_id" => "BRL",
-        "available_quantity" => 1,
-        "buying_mode" => "buy_it_now",
-        "listing_type_id" => "bronze",
-        "condition" => "new",
-        "description" => "Item de Teste. Mercado Livre's PHP SDK.",
-        "video_id" => "RXWn6kftTHY",
-        "warranty" => "12 month",
-        "pictures" => array(
-            array(
-                "source" => "https://upload.wikimedia.org/wikipedia/commons/f/fd/Ray_Ban_Original_Wayfarer.jpg"
-            ),
-            array(
-                "source" => "https://upload.wikimedia.org/wikipedia/commons/a/ab/Teashades.gif"
-            )
-        )
-    )
+						55555555555555555555555
+						55555555555555555555555
+						55555555555555555555555
                     </pre>
 
                 </div>
