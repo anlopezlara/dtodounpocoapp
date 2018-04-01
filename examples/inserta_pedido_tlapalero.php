@@ -167,10 +167,10 @@ print '<html>';
 			}
 			else
 			{
+				print '<p>ACCIONES</p><br>';
 				$N = count($Detalle);
 				for($i=0; $i < $N; $i++)
 				{
-					print '<h1>Acciones</h1>';
 					$mysqli = new mysqli($servername_,$db_username_,$password_, $db_dtodounpoco_);
 					if ($mysqli->connect_errno) {
 						echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
