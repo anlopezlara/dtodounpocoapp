@@ -161,7 +161,7 @@ print '<html>';
 			else
 			{
 			    print '<div class="row">';
-					#print '<div class="col-md-6">';
+					print '<div class="col-md-6">';
 						#print '<pre class="pre-item">';
 							$N = count($Detalle);
 							for($i=0; $i < $N; $i++)
@@ -181,7 +181,7 @@ print '<html>';
 								echo($row['_p_out']."<br>");				
 							}
 						#print '</pre>';
-					#print '</div>';
+					print '</div>';
 				print '</div>';
 			}
 		}
