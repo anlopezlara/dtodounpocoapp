@@ -46,15 +46,12 @@ $appName = explode('.', $domain)[0];
             <hr>
             <div class="row">
                 <div class="col-md-6">
-
                     <pre class="pre-item">
 						55555555555555555555555
 						55555555555555555555555
 						55555555555555555555555
                     </pre>
-
                 </div>
-
             </div>
 
         </main>
