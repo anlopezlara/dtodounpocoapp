@@ -155,7 +155,6 @@ print '<html>';
 		} 
 		function display_det($servername_,$db_username_,$password_,$db_dtodounpoco_)
 		{
-			echo($servername_.' - '.$db_username_.' - '.$password_.' - '.$db_dtodounpoco_."<br>");
 			$conn = new mysqli($servername_, $db_username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
@@ -171,7 +170,7 @@ print '<html>';
 				$N = count($Detalle);
 				for($i=0; $i < $N; $i++)
 				{
-					echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '.$_POST["Pago".$Detalle[$i]]."<br>");
+					print '<h1>Acciones</h1>';
 					$mysqli = new mysqli($servername_,$db_username_,$password_, $db_dtodounpoco_);
 					if ($mysqli->connect_errno) {
 						echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
