@@ -42,6 +42,14 @@ print '<html>';
 		print 'tr:nth-child(even) {';
 		print '    background-color: #dddddd;';
 		print '}';
+		
+		print '#p_rojo     {background-color:rgba(255,0,0,0.3);}';
+		print '#p_verde    {background-color:rgba(0,255,0,0.3);}';
+		print '#p_azul     {background-color:rgba(0,0,255,0.3);}';
+		print '#p_gris     {background-color:rgba(192,192,192,0.3);}';
+		print '#p_amarillo {background-color:rgba(255,255,0,0.3);}';
+		print '#p_fucsia   {background-color:rgba(255,0,255,0.3);}';
+		
 		print '</style>';
 	print '</head>';
 	print '<body>';
@@ -175,7 +183,7 @@ print '<html>';
 						echo "Fetch failed: (" . $mysqli->errno . ") " . $mysqli->error;
 					}
 					$row = $res->fetch_assoc();
-					echo("<pre>".$row['_p_out']."<br>");				
+					echo('<p id="p_gris">'.$row['_p_out'].'</p><br>');				
 				}
 			}
 		}
