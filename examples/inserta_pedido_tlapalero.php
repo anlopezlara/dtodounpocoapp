@@ -142,7 +142,7 @@ print '<html>';
 		} 
 		function display_det($servername_,$db_username_,$password_,$db_dtodounpoco_)
 		{
-			echo($servername_.' - '.$db_username_.' - '.$password_.' - '.$db_dtodounpoco_);
+			echo($servername_.' - '.$db_username_.' - '.$password_.' - '.$db_dtodounpoco_."<br>");
 			$conn = new mysqli($servername_, $db_username_, $password_);
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
