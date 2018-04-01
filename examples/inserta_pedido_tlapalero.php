@@ -160,9 +160,9 @@ print '<html>';
 			}
 			else
 			{
-			    <div class="row">
-					<div class="col-md-6">
-						<pre class="pre-item">
+			    print '<div class="row">';
+					print '<div class="col-md-6">';
+						print '<pre class="pre-item">';
 							$N = count($Detalle);
 							for($i=0; $i < $N; $i++)
 							{
@@ -180,9 +180,9 @@ print '<html>';
 								$row = $res->fetch_assoc();
 								echo($row['_p_out']."<br>");				
 							}
-						</pre>
-					</div>
-				</div>
+						print '</pre>';
+					print '</div>';
+				print '</div>';
 			}
 		}
 		print '</body>';
