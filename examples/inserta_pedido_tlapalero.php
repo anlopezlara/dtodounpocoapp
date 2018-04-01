@@ -160,29 +160,23 @@ print '<html>';
 			}
 			else
 			{
-			    print '<div class="row">';
-					print '<div class="col-md-6">';
-						print '<pre class="pre-item">';
-							$N = count($Detalle);
-							for($i=0; $i < $N; $i++)
-							{
-								echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '.$_POST["Pago".$Detalle[$i]]."<br>");
-								$mysqli = new mysqli($servername_,$db_username_,$password_, $db_dtodounpoco_);
-								if ($mysqli->connect_errno) {
-									echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-								}
-								if (!$mysqli->query("SET @msg = ''") || !$mysqli->query("CALL p_actualiza_producto_desa(".$_SESSION["SPedidoTlapalero"].",'".$Detalle[$i]."','".$_POST["Pago".$Detalle[$i]]."',@msg)")) {
-									echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
-								}
-								if (!($res = $mysqli->query("SELECT @msg as _p_out"))) {
-									echo "Fetch failed: (" . $mysqli->errno . ") " . $mysqli->error;
-								}
-								$row = $res->fetch_assoc();
-								echo($row['_p_out']."<br>");				
-							}
-						print '</pre>';
-					print '</div>';
-				print '</div>';
+				$N = count($Detalle);
+				for($i=0; $i < $N; $i++)
+				{
+					echo($_SESSION["SPedidoTlapalero"].' - '.$Detalle[$i].' - '.$_POST["Pago".$Detalle[$i]]."<br>");
+					$mysqli = new mysqli($servername_,$db_username_,$password_, $db_dtodounpoco_);
+					if ($mysqli->connect_errno) {
+						echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+					}
+					if (!$mysqli->query("SET @msg = ''") || !$mysqli->query("CALL p_actualiza_producto_desa(".$_SESSION["SPedidoTlapalero"].",'".$Detalle[$i]."','".$_POST["Pago".$Detalle[$i]]."',@msg)")) {
+						echo "CALL failed: (" . $mysqli->errno . ") " . $mysqli->error;
+					}
+					if (!($res = $mysqli->query("SELECT @msg as _p_out"))) {
+						echo "Fetch failed: (" . $mysqli->errno . ") " . $mysqli->error;
+					}
+					$row = $res->fetch_assoc();
+					echo("<pre>".$row['_p_out']."<br>");				
+				}
 			}
 		}
 		print '</body>';
