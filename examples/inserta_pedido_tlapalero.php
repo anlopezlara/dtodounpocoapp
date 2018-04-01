@@ -182,7 +182,7 @@ print '<html>';
 						echo "Fetch failed: (" . $mysqli->errno . ") " . $mysqli->error;
 					}
 					$row = $res->fetch_assoc();
-					echo('<p id="p_gris">'.$row['_p_out'].'</p><br>');				
+					echo('<p id="p_gris">'.$row['_p_out'].'</p>');				
 				}
 			}
 		}
