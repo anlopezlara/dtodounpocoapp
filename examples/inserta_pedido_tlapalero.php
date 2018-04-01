@@ -159,7 +159,12 @@ print '<html>';
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
 			} 
-
+			
+			$sql = "DELETE FROM db_dtodounpoco.temp_pedido_tlapalero";
+			
+			$statement = $conn->prepare($sql);
+			$statement->execute();
+			
 			$Detalle = $_POST['PedidoDetalle'];
 			if(empty($Detalle))
 			{
